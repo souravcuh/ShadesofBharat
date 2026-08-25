@@ -278,6 +278,28 @@ img { max-width: 100%; display: block; }
 .chapter-nav-label { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .chapter-nav-link { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; }
 
+/* ---------- Topic groups (festival calendar, etc.) ---------- */
+
+.group-intro { max-width: 900px; margin: 0 auto; padding: 0 40px 30px; font-size: 17px; line-height: 1.7; color: #5a4736; }
+
+.group-heading { max-width: 1200px; margin: 44px auto 22px; padding: 0 40px; display: flex; align-items: baseline; gap: 14px; }
+.group-heading .kicker { font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); }
+.group-heading h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic; font-size: 20px; margin: 0; color: var(--muted); }
+.group-heading .rule { flex: 1; height: 1px; background: var(--line); }
+
+.topic-grid { max-width: 1200px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 900px) { .topic-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .topic-grid { grid-template-columns: 1fr; } }
+
+.topic-card { border: 1px solid var(--line); padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; background: var(--bg); }
+.topic-icon { margin-bottom: 4px; }
+.topic-hi { font-family: 'Rozha One', serif; font-size: 21px; }
+.topic-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--muted); }
+.topic-meta { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-top: 2px; }
+.topic-desc { font-size: 14px; color: #55442f; line-height: 1.55; margin-top: 4px; }
+
+.chapter-progress { max-width: 900px; margin: 50px auto 0; padding: 20px 40px; border-top: 1px dashed var(--line); font-size: 14px; color: var(--muted); text-align: center; }
+
 /* ---------- Coming-soon chapter stub ---------- */
 
 .stub-body { max-width: 700px; margin: 0 auto; padding: 60px 40px 100px; text-align: center; }
