@@ -310,3 +310,50 @@ img { max-width: 100%; display: block; }
   .nav, .hero, .chapter-header, .breadcrumb, .scope-note, .epic-grid, .quote-band, .chapter-nav, .site-footer { padding-left: 20px; padding-right: 20px; }
   #chapters { padding-left: 20px; padding-right: 20px; }
 }
+
+/* ---------- Floating upcoming-festival widget ---------- */
+
+.upcoming-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 40;
+  width: 250px;
+  background: var(--bg);
+  border: 1px solid var(--ink);
+  box-shadow: 0 6px 20px rgba(58, 36, 24, 0.22);
+  font-family: 'EB Garamond', Georgia, serif;
+  animation: upcoming-in 0.4s ease;
+}
+.upcoming-widget-bar { height: 3px; background: var(--accent); }
+.upcoming-widget-body { position: relative; padding: 14px 30px 14px 16px; }
+.upcoming-widget-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  font-family: inherit;
+}
+.upcoming-widget-close:hover { color: var(--ink); }
+.upcoming-widget-kicker { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.upcoming-widget a.upcoming-widget-link { display: block; text-decoration: none; color: var(--ink); }
+.upcoming-widget-hi { font-family: 'Rozha One', serif; font-size: 19px; line-height: 1.2; }
+.upcoming-widget-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 13px; color: var(--muted); margin-top: 1px; }
+.upcoming-widget-date { font-size: 12px; color: var(--ink); margin-top: 8px; }
+.upcoming-widget-days { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+@keyframes upcoming-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .upcoming-widget { right: 12px; left: 12px; width: auto; bottom: 12px; }
+}

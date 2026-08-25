@@ -102,3 +102,78 @@
     applyLang(getLang());
   });
 })();
+
+// Floating "upcoming festival" widget — dates are for 2026/early 2027 and need
+// updating each year (see chapters/utsav-parva.html for the full Panchang walk).
+(function () {
+  var UPCOMING = [
+    { hi: 'रक्षाबंधन', en: 'Raksha Bandhan', date: '2026-08-28', anchor: 'raksha-bandhan' },
+    { hi: 'जन्माष्टमी', en: 'Janmashtami', date: '2026-09-04', anchor: 'janmashtami' },
+    { hi: 'गणेश चतुर्थी', en: 'Ganesh Chaturthi', date: '2026-09-14', anchor: 'ganesh-chaturthi' },
+    { hi: 'शरद नवरात्रि', en: 'Sharad Navratri', date: '2026-10-11', anchor: 'sharad-navratri' },
+    { hi: 'दशहरा', en: 'Dussehra', date: '2026-10-20', anchor: 'dussehra' },
+    { hi: 'धनतेरस', en: 'Dhanteras', date: '2026-11-06', anchor: 'dhanteras' },
+    { hi: 'दिवाली', en: 'Diwali', date: '2026-11-08', anchor: 'diwali' },
+    { hi: 'भाई दूज', en: 'Bhai Dooj', date: '2026-11-10', anchor: 'bhai-dooj' },
+    { hi: 'मकर संक्रांति', en: 'Makar Sankranti', date: '2027-01-14', anchor: 'makar-sankranti' },
+  ];
+
+  function chapterUrl(path) {
+    var inChapters = location.pathname.indexOf('/chapters/') !== -1;
+    return (inChapters ? '' : 'chapters/') + path;
+  }
+
+  function daysUntil(dateStr) {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var target = new Date(dateStr + 'T00:00:00');
+    return Math.round((target - today) / 86400000);
+  }
+
+  function dismissed() {
+    try { return sessionStorage.getItem('sob-upcoming-dismissed') === '1'; } catch (e) { return false; }
+  }
+
+  function dismiss() {
+    try { sessionStorage.setItem('sob-upcoming-dismissed', '1'); } catch (e) {}
+    var el = document.querySelector('.upcoming-widget');
+    if (el) el.remove();
+  }
+
+  function buildWidget() {
+    if (dismissed()) return;
+
+    var next = null;
+    for (var i = 0; i < UPCOMING.length; i++) {
+      if (daysUntil(UPCOMING[i].date) >= 0) { next = UPCOMING[i]; break; }
+    }
+    if (!next) return;
+
+    var days = daysUntil(next.date);
+    var dayLabel = days === 0 ? 'आज · Today' : days === 1 ? 'कल · Tomorrow' : days + ' दिन शेष · days away';
+    var dateLabel = new Date(next.date + 'T00:00:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+
+    var widget = document.createElement('div');
+    widget.className = 'upcoming-widget';
+    widget.innerHTML =
+      '<div class="upcoming-widget-bar"></div>' +
+      '<div class="upcoming-widget-body">' +
+      '<button type="button" class="upcoming-widget-close" aria-label="Close">×</button>' +
+      '<a class="upcoming-widget-link" href="' + chapterUrl('utsav-parva.html') + '#' + next.anchor + '">' +
+      '<div class="upcoming-widget-kicker">आगामी पर्व · Upcoming</div>' +
+      '<div class="upcoming-widget-hi">' + next.hi + '</div>' +
+      '<div class="upcoming-widget-en">' + next.en + '</div>' +
+      '<div class="upcoming-widget-date">' + dateLabel + '</div>' +
+      '<div class="upcoming-widget-days">' + dayLabel + '</div>' +
+      '</a>' +
+      '</div>';
+
+    document.body.appendChild(widget);
+    widget.querySelector('.upcoming-widget-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      dismiss();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', buildWidget);
+})();
