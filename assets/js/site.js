@@ -177,3 +177,60 @@
 
   document.addEventListener('DOMContentLoaded', buildWidget);
 })();
+
+// Reusable multi-photo slot. Drop this anywhere on any page:
+//   <div class="photo-slot" data-photo="festivals/gudi-padwa"></div>
+//   <svg class="topic-icon photo-fallback">...</svg>   (optional — hidden once a photo appears)
+// Then upload images named <slug>-1.jpg, <slug>-2.jpg, <slug>-3.jpg... (up to data-count,
+// default 4) to assets/img/<folder>/ via GitHub's file uploader. No code editing needed —
+// whichever numbers exist are shown, in a small grid, largest first; missing ones are
+// skipped silently. Same markup works on the home page, a chapter page, anywhere.
+(function () {
+  function assetsPrefix() {
+    return location.pathname.indexOf('/chapters/') !== -1 ? '../' : '';
+  }
+
+  function tryLoad(src) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { resolve(src); };
+      img.onerror = function () { resolve(null); };
+      img.src = src;
+    });
+  }
+
+  function initSlot(slot) {
+    var key = slot.getAttribute('data-photo');
+    if (!key) return;
+    var count = parseInt(slot.getAttribute('data-count') || '4', 10);
+    var base = assetsPrefix() + 'assets/img/' + key;
+    var checks = [];
+    for (var i = 1; i <= count; i++) checks.push(tryLoad(base + '-' + i + '.jpg'));
+
+    Promise.all(checks).then(function (results) {
+      var found = results.filter(Boolean);
+      if (!found.length) return;
+
+      found.forEach(function (src) {
+        var a = document.createElement('a');
+        a.href = src;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        a.appendChild(img);
+        slot.appendChild(a);
+      });
+      slot.classList.add('has-photos');
+
+      var scope = slot.parentElement || document;
+      var fallback = scope.querySelector('.photo-fallback');
+      if (fallback) fallback.style.display = 'none';
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.photo-slot[data-photo]').forEach(initSlot);
+  });
+})();

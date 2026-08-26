@@ -293,7 +293,17 @@ img { max-width: 100%; display: block; }
 
 .topic-card { border: 1px solid var(--line); padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; background: var(--bg); }
 .topic-icon { margin-bottom: 4px; }
-.topic-photo { display: none; width: calc(100% + 48px); margin: -26px -24px 6px; height: 150px; object-fit: cover; }
+/* Reusable multi-photo slot — drop <div class="photo-slot" data-photo="folder/slug"></div>
+   anywhere; it looks for folder/slug-1.jpg, -2.jpg, -3.jpg... and shows whichever exist. */
+.photo-slot { display: none; }
+.photo-slot.has-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.photo-slot a { display: block; }
+.photo-slot img { width: 100%; height: 92px; object-fit: cover; display: block; border: 1px solid var(--line); }
 .topic-hi { font-family: 'Rozha One', serif; font-size: 21px; }
 .topic-en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: var(--muted); }
 .topic-meta { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-top: 2px; }
