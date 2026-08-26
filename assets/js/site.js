@@ -235,21 +235,14 @@
   });
 })();
 
-// Floating "verify with original scriptures" notice — site-wide, dismissible per session.
+// Floating "verify with original scriptures" notice — site-wide, shown on every page load.
 (function () {
-  function dismissed() {
-    try { return sessionStorage.getItem('sob-verify-dismissed') === '1'; } catch (e) { return false; }
-  }
-
   function dismiss() {
-    try { sessionStorage.setItem('sob-verify-dismissed', '1'); } catch (e) {}
     var el = document.querySelector('.verify-note');
     if (el) el.remove();
   }
 
   function buildNote() {
-    if (dismissed()) return;
-
     var note = document.createElement('div');
     note.className = 'verify-note';
     note.innerHTML =
