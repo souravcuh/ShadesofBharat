@@ -181,14 +181,17 @@
 // Reusable multi-photo slot. Drop this anywhere on any page:
 //   <div class="photo-slot" data-photo="festivals/gudi-padwa"></div>
 //   <svg class="topic-icon photo-fallback">...</svg>   (optional — hidden once a photo appears)
-// Then upload images named <slug>-1.jpg, <slug>-2.jpg, <slug>-3.jpg... (up to data-count,
-// default 4) to assets/img/<folder>/ via GitHub's file uploader. No code editing needed —
-// whichever numbers exist are shown, in a small grid, largest first; missing ones are
-// skipped silently. Same markup works on the home page, a chapter page, anywhere.
+// Then upload images named <slug>-1.<ext>, <slug>-2.<ext>, <slug>-3.<ext>... (up to
+// data-count, default 4) to assets/img/<folder>/ via GitHub's file uploader — <ext> can be
+// jpg, jpeg, png, or webp, any mix. No code editing needed — whichever numbers exist are
+// shown, in a small grid, largest first; missing ones are skipped silently. Same markup
+// works on the home page, a chapter page, anywhere.
 (function () {
   function assetsPrefix() {
     return location.pathname.indexOf('/chapters/') !== -1 ? '../' : '';
   }
+
+  var EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp'];
 
   function tryLoad(src) {
     return new Promise(function (resolve) {
@@ -199,13 +202,24 @@
     });
   }
 
+  // Tries each extension in turn for one numbered slot; resolves with the first that loads.
+  function tryExtensions(base) {
+    var chain = Promise.resolve(null);
+    EXTENSIONS.forEach(function (ext) {
+      chain = chain.then(function (found) {
+        return found || tryLoad(base + '.' + ext);
+      });
+    });
+    return chain;
+  }
+
   function initSlot(slot) {
     var key = slot.getAttribute('data-photo');
     if (!key) return;
     var count = parseInt(slot.getAttribute('data-count') || '4', 10);
     var base = assetsPrefix() + 'assets/img/' + key;
     var checks = [];
-    for (var i = 1; i <= count; i++) checks.push(tryLoad(base + '-' + i + '.jpg'));
+    for (var i = 1; i <= count; i++) checks.push(tryExtensions(base + '-' + i));
 
     Promise.all(checks).then(function (results) {
       var found = results.filter(Boolean);
