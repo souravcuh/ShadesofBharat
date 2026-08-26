@@ -234,3 +234,37 @@
     document.querySelectorAll('.photo-slot[data-photo]').forEach(initSlot);
   });
 })();
+
+// Floating "verify with original scriptures" notice — site-wide, dismissible per session.
+(function () {
+  function dismissed() {
+    try { return sessionStorage.getItem('sob-verify-dismissed') === '1'; } catch (e) { return false; }
+  }
+
+  function dismiss() {
+    try { sessionStorage.setItem('sob-verify-dismissed', '1'); } catch (e) {}
+    var el = document.querySelector('.verify-note');
+    if (el) el.remove();
+  }
+
+  function buildNote() {
+    if (dismissed()) return;
+
+    var note = document.createElement('div');
+    note.className = 'verify-note';
+    note.innerHTML =
+      '<div class="verify-note-body">' +
+      '<button type="button" class="verify-note-close" aria-label="Close">×</button>' +
+      '<div class="verify-note-hi">यह जानकारी सामान्य परिचय हेतु है — कृपया मूल शास्त्रों (वेद, पुराण, इतिहास) से सत्यापित करें।</div>' +
+      '<div class="verify-note-en">This content is a general introduction — please double-check against original scriptures (Vedas, Puranas, Itihasa) for scholarly or ritual use.</div>' +
+      '</div>';
+
+    document.body.appendChild(note);
+    note.querySelector('.verify-note-close').addEventListener('click', function (e) {
+      e.preventDefault();
+      dismiss();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', buildNote);
+})();

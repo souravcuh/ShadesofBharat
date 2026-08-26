@@ -368,3 +368,41 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .upcoming-widget { right: 12px; left: 12px; width: auto; bottom: 12px; }
 }
+
+/* ---------- Floating source-verification notice ---------- */
+
+.verify-note {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 39;
+  max-width: 360px;
+  background: var(--bg);
+  border: 1px solid var(--ink);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 6px 20px rgba(58, 36, 24, 0.22);
+  font-family: 'EB Garamond', Georgia, serif;
+  animation: upcoming-in 0.4s ease;
+}
+.verify-note-body { position: relative; padding: 10px 30px 10px 14px; }
+.verify-note-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+  font-family: inherit;
+}
+.verify-note-close:hover { color: var(--ink); }
+.verify-note-hi { font-size: 13px; color: var(--ink); line-height: 1.5; }
+.verify-note-en { font-size: 12px; font-style: italic; color: var(--muted); line-height: 1.5; margin-top: 3px; }
+
+@media (max-width: 900px) {
+  .verify-note { display: none; }
+}
