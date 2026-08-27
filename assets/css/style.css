@@ -279,6 +279,9 @@ img { max-width: 100%; display: block; }
 @media (max-width: 600px) { .topic-grid { grid-template-columns: 1fr; } }
 
 .topic-card { border: 1px solid var(--line); padding: 26px 24px; display: flex; flex-direction: column; gap: 8px; background: var(--bg); }
+a.topic-card { text-decoration: none; color: inherit; transition: border-color 0.15s ease; }
+a.topic-card:hover { border-color: var(--accent); }
+.topic-more { font-size: 12px; letter-spacing: 0.06em; color: var(--accent); margin-top: 6px; }
 .topic-icon { margin-bottom: 4px; }
 /* Reusable multi-photo slot — drop <div class="photo-slot" data-photo="folder/slug"></div>
    anywhere; it looks for folder/slug-1.jpg, -2.jpg, -3.jpg... and shows whichever exist. */
