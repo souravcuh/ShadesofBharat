@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Living Bharatvarsha — Shades of Bharat</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=EB+Garamond:wght@400;500&family=Hind:wght@500&display=swap">
+<style>
+:root{--ink:#3a2418;--deep:#24140d;--red:#8f3327;--gold:#c7984f;--paper:#f4e7ca;--light:#fff9e8}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'EB Garamond',serif;color:var(--ink)}
+body{background:radial-gradient(circle at 50% 20%,#fffaf0 0,#f4e7ca 58%,#e5d1aa 100%);overflow-x:hidden}
+nav{position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:24px 5vw;border-bottom:1px solid rgba(111,72,31,.28);background:rgba(244,231,202,.72);backdrop-filter:blur(8px)}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.13em}.brand img{width:44px;height:44px}.back{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.stage{position:relative;min-height:calc(100vh - 94px);isolation:isolate;overflow:hidden}.map-layer{position:absolute;inset:0;z-index:-3;display:grid;place-items:center;pointer-events:none}.map{width:min(78vw,920px);height:auto;opacity:.15;filter:sepia(.25)}
+.map text{font-family:'Cormorant Garamond',serif;fill:#704923;letter-spacing:.08em}.map .region{fill:#a66a33;fill-opacity:.11;stroke:#714723;stroke-width:2}.map .river{fill:none;stroke:#9b6f46;stroke-width:1.5;stroke-opacity:.42}.map .kalinga{fill:#b76236;fill-opacity:.2;stroke:#8f3327;stroke-opacity:.5}
+.grain{position:absolute;inset:0;z-index:-2;opacity:.18;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(72,40,18,.05) 0 1px,transparent 1px 4px),radial-gradient(circle at 15% 20%,rgba(255,255,255,.7),transparent 28%)}
+.content{position:relative;z-index:4;min-height:calc(100vh - 94px);display:grid;place-items:center;text-align:center;padding:70px 24px}.panel{width:min(790px,92vw);padding:48px 52px;background:rgba(250,240,216,.72);border:1px solid rgba(117,75,33,.4);box-shadow:inset 0 0 0 5px rgba(255,250,235,.38),0 18px 55px rgba(62,34,16,.11);backdrop-filter:blur(3px);position:relative}.panel:before,.panel:after{content:'✦';position:absolute;color:var(--red);font-size:12px}.panel:before{top:14px;left:16px}.panel:after{right:16px;bottom:14px}.kicker{font-family:'Hind',sans-serif;color:var(--red);letter-spacing:.16em;font-size:13px}.panel h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,78px);font-weight:500;margin:8px 0 15px;line-height:.95}.panel p{font-size:20px;line-height:1.6;color:#5c4533;margin:0 auto 28px;max-width:620px}.modes{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.modes button{font:inherit;padding:10px 17px;border:1px solid #79502d;background:rgba(255,249,232,.65);color:#4a2c1b;cursor:pointer;letter-spacing:.04em}.modes button.active{background:#3a2418;color:#f4e7ca;border-color:#3a2418}
+.story{position:absolute;inset:0;z-index:1;pointer-events:none}.glow{filter:drop-shadow(0 0 10px rgba(214,159,73,.55))}.elephant{position:absolute;left:7%;top:57%;width:112px;opacity:0}.elephant svg{width:100%;height:auto}.mode-history .elephant{opacity:.5;animation:elephantWalk 18s linear infinite}.route{position:absolute;left:12%;top:51%;width:70%;height:2px;border-top:1px dashed rgba(151,98,43,.28);transform:rotate(-7deg);opacity:0}.mode-history .route{opacity:1}.wheel{position:absolute;right:22%;top:52%;width:92px;height:92px;opacity:0}.mode-konark .wheel{opacity:.48;animation:wheelSpin 12s linear infinite, wheelFloat 6s ease-in-out infinite}.kalinga-pulse{position:absolute;right:24%;top:55%;width:34px;height:34px;border:1px solid rgba(143,51,39,.55);border-radius:50%;opacity:0}.mode-konark .kalinga-pulse{opacity:1;animation:pulse 2.8s ease-out infinite}.asana{position:absolute;bottom:14%;width:66px;opacity:0;transform:translateY(20px)}.asana svg{width:100%;height:auto}.asana.a1{left:18%}.asana.a2{left:38%}.asana.a3{left:58%}.asana.a4{left:76%}.mode-yoga .asana{animation:asanaRise 8s ease-in-out infinite}.mode-yoga .a2{animation-delay:1.2s}.mode-yoga .a3{animation-delay:2.4s}.mode-yoga .a4{animation-delay:3.6s}
+@keyframes elephantWalk{0%{transform:translate(-10vw,16px) scale(.9);opacity:0}8%{opacity:.45}50%{transform:translate(38vw,-20px) scale(1)}92%{opacity:.45}100%{transform:translate(76vw,-54px) scale(.9);opacity:0}}
+@keyframes wheelSpin{to{transform:rotate(360deg)}}@keyframes wheelFloat{50%{margin-top:-12px}}@keyframes pulse{0%{transform:scale(.7);opacity:.75}100%{transform:scale(2.5);opacity:0}}@keyframes asanaRise{0%,100%{opacity:0;transform:translateY(24px)}18%,68%{opacity:.35;transform:translateY(0)}82%{opacity:0;transform:translateY(-18px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.mode-history .elephant,.mode-konark .wheel,.mode-yoga .asana{opacity:.28!important}}
+@media(max-width:700px){.map{width:118vw}.panel{padding:38px 24px}.panel p{font-size:18px}.elephant{width:82px}.wheel{width:70px;height:70px;right:12%}.asana{width:46px}}
+</style>
+</head>
+<body>
+<nav><div class="brand"><img src="assets/img/logo.svg" alt=""><span>SHADES OF BHARAT</span></div><a class="back" href="index.html">← Home</a></nav>
+<main id="stage" class="stage mode-history">
+<div class="map-layer" aria-hidden="true">
+<svg class="map" viewBox="0 0 800 700" role="img" aria-label="Stylised light Bharatvarsha background map">
+<path class="region" d="M236 78 292 55 345 70 392 54 451 71 506 59 548 90 596 104 626 148 604 186 625 223 595 262 575 305 541 328 526 366 505 397 488 439 462 477 441 519 416 567 390 627 364 584 348 531 323 488 301 450 274 424 250 386 225 359 198 324 171 290 151 252 166 214 149 176 180 147 190 108Z"/>
+<path class="region" d="M169 184 122 196 88 217 66 245 88 265 125 257 158 236Z"/>
+<path class="region" d="M603 162 655 150 704 166 738 198 710 218 666 208 626 221Z"/>
+<path class="region" d="M387 630 403 651 392 679 376 650Z"/>
+<path class="river" d="M292 107 C325 156 339 207 374 250 C398 281 443 295 486 316"/>
+<path class="river" d="M470 117 C446 174 436 220 443 271 C450 322 475 350 511 371"/>
+<path class="kalinga" d="M493 330 531 306 551 335 530 377 500 395 480 367Z"/>
+<text x="330" y="335" font-size="35" opacity=".62">भारतवर्ष</text><text x="487" y="354" font-size="18" opacity=".62">कलिङ्ग</text><text x="205" y="168" font-size="14" opacity=".44">गान्धार</text><text x="330" y="188" font-size="14" opacity=".44">कुरु</text><text x="404" y="241" font-size="14" opacity=".44">मगध</text><text x="326" y="438" font-size="14" opacity=".44">दक्षिणापथ</text>
+</svg>
+</div>
+<div class="grain"></div>
+<div class="story" aria-hidden="true">
+<div class="route"></div>
+<div class="elephant glow"><svg viewBox="0 0 150 100"><g fill="#9b6c35"><path d="M26 52c2-21 19-34 46-34 24 0 42 10 49 27l13 4c8 3 11 10 8 17-3 7-10 10-17 7l-10-4-4 23H98l1-24H61l-2 24H46l1-28c-8-2-14-6-21-12Z"/><path d="M118 42c7-10 14-14 22-14 4 0 7 3 7 7 0 5-3 8-8 9-6 1-10 4-13 10Z"/><circle cx="108" cy="38" r="2.5" fill="#f5e3be"/><path d="M59 17 69 4 81 18Z"/><rect x="67" y="7" width="17" height="12" rx="3" fill="#7e3d29"/></g></svg></div>
+<div class="wheel glow"><svg viewBox="0 0 100 100"><g fill="none" stroke="#9b672f" stroke-width="4"><circle cx="50" cy="50" r="42"/><circle cx="50" cy="50" r="10"/><circle cx="50" cy="50" r="33"/><path d="M50 8v32M50 60v32M8 50h32M60 50h32M20 20l23 23M57 57l23 23M80 20 57 43M43 57 20 80"/></g></svg></div><div class="kalinga-pulse"></div>
+<div class="asana a1"><svg viewBox="0 0 80 110"><g fill="none" stroke="#9b672f" stroke-width="5" stroke-linecap="round"><circle cx="40" cy="16" r="8"/><path d="M40 25v31M40 38 19 53M40 38l21 15M40 55 22 83M40 55l19 29M14 84h52"/></g></svg></div>
+<div class="asana a2"><svg viewBox="0 0 80 110"><g fill="none" stroke="#9b672f" stroke-width="5" stroke-linecap="round"><circle cx="40" cy="18" r="8"/><path d="M40 27v27M40 34 19 18M40 34l21-16M40 54 18 72M40 54l22 18M18 72 8 96M62 72l10 24"/></g></svg></div>
+<div class="asana a3"><svg viewBox="0 0 80 110"><g fill="none" stroke="#9b672f" stroke-width="5" stroke-linecap="round"><circle cx="40" cy="18" r="8"/><path d="M40 27v29M40 38 18 39M40 38l20 1M40 56 20 84M40 56l20 28M13 85h54"/></g></svg></div>
+<div class="asana a4"><svg viewBox="0 0 80 110"><g fill="none" stroke="#9b672f" stroke-width="5" stroke-linecap="round"><circle cx="40" cy="18" r="8"/><path d="M40 27v24M40 34 27 47M40 34l13 13M40 51 25 73M40 51l15 22M25 73 16 88M55 73l15 15"/></g></svg></div>
+</div>
+<section class="content"><div class="panel"><div class="kicker">जीवित भारतवर्ष · LIVING BHARATVARSA</div><h1>Stories move across the land.</h1><p>This is the design prototype: the map stays quiet like a manuscript watermark, while each chapter awakens its own symbols in soft light.</p><div class="modes"><button class="active" data-mode="history">History · Elephant Route</button><button data-mode="konark">Konark · Kalinga Chakra</button><button data-mode="yoga">Yoga · Asanas Arise</button></div></div></section>
+</main>
+<script>
+const stage=document.getElementById('stage');const buttons=[...document.querySelectorAll('[data-mode]')];buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');stage.className='stage mode-'+b.dataset.mode;}));
+</script>
+</body></html>
