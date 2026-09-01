@@ -3,57 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shades of Bharat — Walk Through Bharat</title>
-<meta name="description" content="A walk through Bharat's dharma, epics, sages, knowledge, festivals, arts, sacred places, and everyday life.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Rozha+One&family=Hind:wght@400;500;600&display=swap">
+<title>Shades of Bharat — भारतवर्ष की यात्रा</title>
+<meta name="description" content="A Bharatiya journey through dharma, itihasa, sages, knowledge, festivals, arts, sacred places and everyday life.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Rozha+One&family=Hind:wght@400;500;600&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/chapter-bharatiya.css">
 <style>
-:root{--ink:#3b2417;--deep:#2b180f;--red:#8f3327;--gold:#b8873e;--paper:#f6ead0;--paper2:#ecdbb9;--line:rgba(96,58,27,.28)}
-*{box-sizing:border-box}
-body.home-antique{margin:0;color:var(--ink);background:#f3e5c8;overflow-x:hidden;position:relative;min-height:100vh}
-.bharat-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:url('assets/img/home-bharatvarsha-bg.jpg?v=3') center top/cover no-repeat;opacity:.84;filter:sepia(.03) saturate(1.05) contrast(1.28) brightness(.96)}
-.bharat-wash{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(247,236,211,.24) 0%,rgba(247,236,211,.08) 48%,rgba(247,236,211,.02) 100%)}
-body.home-antique>.antique-topline,body.home-antique>nav,body.home-antique>.heritage-strip,body.home-antique>header,body.home-antique>main,body.home-antique>footer,body.home-antique>script{position:relative;z-index:2}
-.antique-topline{height:6px;background:linear-gradient(90deg,#301b11,#8d3827 25%,#c69a51 50%,#8d3827 75%,#301b11)}
-.nav{max-width:1260px;margin:auto;padding:24px 38px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(113,72,31,.25);background:rgba(247,237,215,.26);backdrop-filter:blur(1px)}
-.brand{display:flex;align-items:center;gap:13px}.logo-flag{width:54px!important;height:54px!important;padding:4px;border-radius:50%;background:rgba(255,248,229,.58);border:1px solid rgba(127,78,31,.42);box-shadow:0 2px 12px rgba(57,31,14,.12)}
-.brand-wordmark{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;letter-spacing:.1em;color:#3a1d12}
-.nav-right{display:flex;align-items:center;gap:24px}.nav-links{display:flex;gap:28px}.nav-links a{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#4a2b1a}.lang-switch{display:flex;gap:3px}.lang-switch button{border:0;background:transparent;color:#6d5038;cursor:pointer;font-family:inherit}.lang-switch button.active{color:var(--red);border-bottom:1px solid var(--red)}
-.heritage-strip{max-width:1180px;margin:0 auto;text-align:center;padding:11px 20px 0;color:#7d5b35;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
-.hero{position:relative;max-width:1260px;margin:0 auto;min-height:610px;padding:82px 6vw 78px;display:flex;align-items:center}
-.hero::before{content:"";position:absolute;inset:35px 3vw 28px;border:1px solid rgba(116,75,34,.34);box-shadow:inset 0 0 0 5px rgba(255,251,239,.12),0 18px 40px rgba(57,31,15,.08);background:linear-gradient(90deg,rgba(248,238,215,.55) 0%,rgba(248,238,215,.29) 34%,rgba(248,238,215,.05) 67%,rgba(248,238,215,0) 100%);z-index:0;pointer-events:none}
-.hero-content{max-width:620px;text-align:left;margin-left:2vw;position:relative;z-index:2}.hero-seal{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(132,77,29,.43);background:rgba(249,239,218,.72);color:var(--red);font-family:'Hind',serif;font-size:28px;margin-bottom:15px}.hero-eyebrow{font-size:14px;color:#8d5130;letter-spacing:.06em}.hero-sanskrit{font-family:'Hind',serif;color:#8a6034;font-size:17px;margin-top:6px}.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(62px,7vw,104px);line-height:.88;font-weight:500;margin:8px 0 12px;color:#4a160f;text-shadow:0 1px rgba(255,255,255,.8)}.hero-rule{height:18px;width:240px;border-bottom:1px solid #a97939;margin:0 0 21px}.hero-body{font-size:20px;line-height:1.55;color:#58402c;max-width:590px}.hero-cta{display:inline-block;margin-top:24px;padding:14px 30px;border:1px solid #6b3521;background:#6f251e;color:#f7e6bf!important;letter-spacing:.1em;text-transform:uppercase;font-size:13px;box-shadow:inset 0 0 0 3px rgba(223,177,92,.18),0 7px 16px rgba(67,31,16,.16);transition:.25s}.hero-cta:hover{transform:translateY(-2px);background:#3d2116}
-.journey{position:relative;max-width:1240px;margin:0 auto;padding:38px 30px 74px}.section-heading{text-align:center;margin-bottom:34px}.section-kicker{font-size:12px;letter-spacing:.25em;color:var(--red);text-transform:uppercase}.section-title{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:500;color:#3d2517;margin:6px 0 0}.journey-intro{text-align:center;max-width:720px;margin:0 auto 38px;color:#76583f;font-style:italic;font-size:17px}.chapter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.chapter-card{position:relative;min-height:245px;padding:40px 23px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:9px;background:rgba(247,235,208,.72);border:1px solid #8d673c;clip-path:polygon(12% 0,88% 0,100% 10%,100% 100%,0 100%,0 10%);box-shadow:inset 0 0 0 4px rgba(255,250,233,.5),inset 0 0 0 6px rgba(151,105,53,.12),0 8px 20px rgba(74,40,19,.10);transition:.28s ease}.chapter-card::before{content:"✦";position:absolute;top:10px;color:#9a5d2e;font-size:12px}.chapter-card::after{content:"";position:absolute;inset:9px;border:1px solid rgba(142,94,43,.28);clip-path:inherit;pointer-events:none}.chapter-card:hover{transform:translateY(-5px);background:rgba(250,240,218,.91);box-shadow:inset 0 0 0 4px rgba(255,250,233,.55),0 14px 28px rgba(74,40,19,.16)}.chapter-num{font-size:11px;letter-spacing:.18em;color:#9b6631}.chapter-hi{font-family:'Hind',serif;color:#8b3327;font-size:15px}.chapter-en{font-family:'Cormorant Garamond',serif;font-size:25px;line-height:1.05;color:#3f2618}.chapter-desc{font-size:15px;line-height:1.35;color:#755a42}.chapter-more{font-size:12px;color:#8f3327;margin-top:auto}.geo-banner{display:block;margin:28px 0 0;padding:26px;text-align:center;background:rgba(239,220,184,.64);border:1px solid rgba(117,76,33,.36)}.geo-banner strong{font-family:'Cormorant Garamond',serif;font-size:27px}.geo-banner span{display:block;color:#72533a;margin-top:5px}.quote-band{margin-top:42px;padding:42px 20px;text-align:center;background:rgba(52,29,18,.92);color:#ead4a9}.quote-band .quote-hi{font-family:'Hind',serif;font-size:28px;color:#e0b65f}.quote-band .quote-en{font-size:18px;margin-top:7px}.quote-band .quote-source{font-size:12px;letter-spacing:.12em;margin-top:8px;opacity:.75}.footer{text-align:center;padding:28px;color:#5f432d;border-top:1px solid rgba(110,70,31,.25);background:rgba(245,233,207,.48)}
-@media(max-width:950px){.chapter-grid{grid-template-columns:repeat(2,1fr)}.nav-links{gap:14px}.hero{min-height:560px}.hero::before{background:linear-gradient(90deg,rgba(248,238,215,.50),rgba(248,238,215,.17),rgba(248,238,215,.02))}}
-@media(max-width:700px){.bharat-bg{background-size:auto 100vh;background-position:center top;opacity:.78}.nav{padding:18px 20px;gap:15px;flex-direction:column}.nav-right{justify-content:center}.nav-links{flex-wrap:wrap;justify-content:center}.hero{padding:58px 24px;min-height:600px}.hero-content{text-align:center;margin:auto}.hero-rule{margin-left:auto;margin-right:auto}.chapter-grid{grid-template-columns:1fr}.journey{padding-left:18px;padding-right:18px}.brand-wordmark{font-size:19px}.hero-title{font-size:62px}}
+body.sob-chapter .home-kicker{max-width:1120px;margin:18px auto 0;text-align:center;color:#8b652d;font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+body.sob-chapter .chapter-header{margin-top:28px}
+body.sob-chapter .chapter-header-en{font-size:clamp(54px,7vw,92px)}
+body.sob-chapter .home-cta{display:inline-block;margin-top:22px;padding:13px 30px;border:1px solid #5d2b1b;background:#74271f;color:#f8e7b9!important;font-size:12px;letter-spacing:.12em;text-transform:uppercase;box-shadow:inset 0 0 0 3px rgba(200,154,74,.17),0 7px 15px rgba(58,30,14,.13)}
+body.sob-chapter .home-cta:hover{background:#3a2015;color:#f8e7b9!important}
+body.sob-chapter .home-chapters{padding-bottom:70px}
+body.sob-chapter .home-chapters .topic-grid{grid-template-columns:repeat(3,1fr)}
+body.sob-chapter .home-chapters .topic-card{min-height:250px;text-align:center;display:flex;flex-direction:column;align-items:center}
+body.sob-chapter .home-number{font-size:11px;letter-spacing:.18em;color:#9a7140;margin-bottom:4px}
+body.sob-chapter .home-symbol{width:44px;height:44px;border:1px solid rgba(134,84,36,.34);border-radius:50%;display:grid;place-items:center;margin:4px auto 8px;color:#9a3b2d;font-family:'Hind',serif;font-size:20px;background:rgba(255,248,229,.38)}
+body.sob-chapter .topic-desc{max-width:290px}
+body.sob-chapter .home-quote{max-width:900px;margin:12px auto 70px;padding:34px 28px;text-align:center;border-top:1px solid rgba(124,76,31,.28);border-bottom:1px solid rgba(124,76,31,.28);background:rgba(249,239,216,.42)}
+body.sob-chapter .home-quote-hi{font-family:'Hind',serif;font-size:27px;color:#8f3428}
+body.sob-chapter .home-quote-en{font-size:18px;color:#604630;margin-top:5px}
+body.sob-chapter .home-quote-source{font-size:12px;letter-spacing:.12em;color:#876642;margin-top:8px}
+@media(max-width:900px){body.sob-chapter .home-chapters .topic-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){body.sob-chapter .home-chapters .topic-grid{grid-template-columns:1fr}.nav-right{justify-content:center}.nav-links{justify-content:center;flex-wrap:wrap}.chapter-header-en{font-size:52px!important}}
 </style>
 </head>
-<body class="home-antique">
-<div class="bharat-bg" aria-hidden="true"></div>
-<div class="bharat-wash" aria-hidden="true"></div>
-<div class="antique-topline"></div>
+<body class="sob-chapter">
 <nav class="nav">
-  <div class="brand"><img class="logo-flag" src="assets/img/logo.svg" alt="Shades of Bharat"><span class="brand-wordmark">SHADES OF BHARAT</span></div>
-  <div class="nav-right"><div class="nav-links"><a href="index.html" data-i18n="nav.home">Home</a><a href="#chapters" data-i18n="nav.chapters">Chapters</a><a href="#">About</a><a href="#">Journal</a></div><div class="lang-switch"></div></div>
-</nav>
-<div class="heritage-strip">भारतवर्ष ✦ Bharatavarsha</div>
-<header class="hero"><div class="hero-content"><div class="hero-seal">श्री</div><div class="hero-eyebrow" data-i18n="hero.eyebrow">A New Lens on Bharat</div><div class="hero-sanskrit">भारतस्य अनन्तकथा</div><h1 class="hero-title" data-i18n="hero.title">Walk Through Bharat</h1><div class="hero-rule"></div><p class="hero-body" data-i18n="hero.body">Timeless art and innovation. Vedas and epics. Sages and their science. One civilization, told in its own voice — its dharma, its knowledge, its everyday life.</p><a class="hero-cta" href="#chapters" data-i18n="hero.cta">Begin the Walk</a></div></header>
-<main id="chapters" class="journey">
-  <div class="section-heading"><div class="section-kicker">नौ अध्याय · Nine Chapters</div><h2 class="section-title">The Journey Ahead</h2></div>
-  <p class="journey-intro">Enter as one would enter an old mandapa: not merely to look, but to listen — to memory, knowledge, craft, landscape and living tradition.</p>
-  <div class="chapter-grid">
-    <a class="chapter-card" href="chapters/dharma-shastra.html"><div class="chapter-num">01</div><div class="chapter-hi">धर्म एवं शास्त्र</div><div class="chapter-en">Dharma &amp; Shastra</div><div class="chapter-desc">Dharma, values, scriptures and philosophical traditions.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/itihasa.html"><div class="chapter-num">02</div><div class="chapter-hi">इतिहास</div><div class="chapter-en">Itihasa — The Epics</div><div class="chapter-desc">Civilizational memory, chronicles and epic narratives.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/rishi-parampara.html"><div class="chapter-num">03</div><div class="chapter-hi">ऋषि परम्परा</div><div class="chapter-en">Rishi Parampara</div><div class="chapter-desc">Sages, teachers and lineages of knowledge.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/gyan-vigyan.html"><div class="chapter-num">04</div><div class="chapter-hi">ज्ञान-विज्ञान</div><div class="chapter-en">Gyan-Vigyan</div><div class="chapter-desc">Science, mathematics, astronomy and knowledge systems.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/jeevan-shaili.html"><div class="chapter-num">05</div><div class="chapter-hi">जीवन शैली</div><div class="chapter-en">Jeevan Shaili</div><div class="chapter-desc">Everyday life, family, food, clothing and social traditions.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/utsav-parva.html"><div class="chapter-num">06</div><div class="chapter-hi">उत्सव एवं पर्व</div><div class="chapter-en">Utsav &amp; Parva</div><div class="chapter-desc">Festivals, fairs, seasons and celebrations.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/kala-nirman.html"><div class="chapter-num">07</div><div class="chapter-hi">कला एवं निर्माण</div><div class="chapter-en">Kala &amp; Nirman</div><div class="chapter-desc">Art, architecture, handcrafts and making traditions.</div><span class="chapter-more">Enter chapter →</span></a>
-    <a class="chapter-card" href="chapters/tirtha-devalaya.html"><div class="chapter-num">08</div><div class="chapter-hi">तीर्थ एवं देवालय</div><div class="chapter-en">Tirtha &amp; Devalaya</div><div class="chapter-desc">Sacred places, temples and pilgrimage landscapes.</div><span class="chapter-more">Enter chapter →</span></a>
+  <div class="brand">
+    <img class="logo-flag" src="assets/img/logo.svg" alt="Shades of Bharat" width="48" height="48">
+    <span class="brand-wordmark">SHADES OF BHARAT</span>
   </div>
-  <a class="geo-banner" href="chapters/bhoomi-bibidhta.html"><strong>Bhoomi &amp; Bibidhta — Geography &amp; Diversity</strong><span>भूमि, नदी, पर्वत, वन और विविधता — the land beneath the stories.</span></a>
-  <section class="quote-band"><div class="quote-hi">वसुधैव कुटुम्बकम्</div><div class="quote-en">“The world is one family.”</div><div class="quote-source">Maha Upanishad · महा उपनिषद्</div></section>
-</main>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="#chapters" data-i18n="nav.chapters">Chapters</a>
+      <a href="#" data-i18n="nav.about">About</a>
+      <a href="#" data-i18n="nav.journal">Journal</a>
+    </div>
+    <div class="lang-switch"></div>
+  </div>
+</nav>
+<div class="divider-dotchain"></div>
+<div class="home-kicker">भारतवर्ष · A Civilizational Journey</div>
+<header class="chapter-header">
+  <div class="chapter-header-hi">भारत दर्शन</div>
+  <h1 class="chapter-header-en" data-i18n="hero.title">Walk Through Bharat</h1>
+  <p class="chapter-header-body" data-i18n="hero.body">Timeless art and innovation. Vedas and epics. Sages and their science. One civilization, told in its own voice — its dharma, its knowledge, its everyday life.</p>
+  <a class="home-cta" href="#chapters" data-i18n="hero.cta">Begin the Walk</a>
+</header>
+<div class="divider-lotus-vine"></div>
+<section id="chapters" class="home-chapters">
+  <div class="group-heading">
+    <span class="kicker">नौ अध्याय</span>
+    <h3>The Journey Ahead</h3>
+    <span class="rule"></span>
+  </div>
+  <p class="group-intro">Enter as one would enter an old mandapa — to listen to memory, knowledge, craft, landscape and living tradition.</p>
+  <div class="topic-grid">
+    <a class="topic-card" href="chapters/dharma-shastra.html"><div class="home-number">01</div><div class="home-symbol">ॐ</div><div class="topic-hi">धर्म एवं शास्त्र</div><div class="topic-en">Dharma &amp; Shastra</div><p class="topic-desc">Dharma, values, scriptures and philosophical traditions.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/itihasa.html"><div class="home-number">02</div><div class="home-symbol">ध</div><div class="topic-hi">इतिहास</div><div class="topic-en">Itihasa — The Epics</div><p class="topic-desc">Civilizational memory, chronicles, Ramayana and Mahabharata.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/rishi-parampara.html"><div class="home-number">03</div><div class="home-symbol">ऋ</div><div class="topic-hi">ऋषि परम्परा</div><div class="topic-en">Rishi Parampara</div><p class="topic-desc">Sages, teachers and living lineages of knowledge.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/gyan-vigyan.html"><div class="home-number">04</div><div class="home-symbol">ज्ञ</div><div class="topic-hi">ज्ञान-विज्ञान</div><div class="topic-en">Gyan-Vigyan</div><p class="topic-desc">Mathematics, astronomy, medicine, science and knowledge systems.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/jeevan-shaili.html"><div class="home-number">05</div><div class="home-symbol">गृ</div><div class="topic-hi">जीवन शैली</div><div class="topic-en">Jeevan Shaili</div><p class="topic-desc">Home, food, clothing, family and everyday Bharatiya life.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/utsav-parva.html"><div class="home-number">06</div><div class="home-symbol">दी</div><div class="topic-hi">उत्सव एवं पर्व</div><div class="topic-en">Utsav &amp; Parva</div><p class="topic-desc">Festivals, fairs, seasons, pilgrimage gatherings and celebration.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/kala-nirman.html"><div class="home-number">07</div><div class="home-symbol">क</div><div class="topic-hi">कला एवं निर्माण</div><div class="topic-en">Kala &amp; Nirman</div><p class="topic-desc">Art, architecture, textiles, craft and making traditions.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/tirtha-devalaya.html"><div class="home-number">08</div><div class="home-symbol">श्री</div><div class="topic-hi">तीर्थ एवं देवालय</div><div class="topic-en">Tirtha &amp; Devalaya</div><p class="topic-desc">Sacred places, temples and pilgrimage landscapes.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+    <a class="topic-card" href="chapters/bhoomi-bibidhta.html"><div class="home-number">09</div><div class="home-symbol">भू</div><div class="topic-hi">भूमि एवं विविधता</div><div class="topic-en">Bhoomi &amp; Bibidhta</div><p class="topic-desc">Rivers, mountains, forests, regions and the diversity of Bharat.</p><span class="topic-more">अध्याय में प्रवेश · Enter chapter →</span></a>
+  </div>
+</section>
+<section class="home-quote">
+  <div class="home-quote-hi">वसुधैव कुटुम्बकम्</div>
+  <div class="home-quote-en">“The world is one family.”</div>
+  <div class="home-quote-source">Maha Upanishad · महा उपनिषद्</div>
+</section>
 <footer class="footer">Shades of Bharat · A civilizational journey through time, knowledge, craft and place.</footer>
 <script src="assets/js/site.js"></script>
 </body>
