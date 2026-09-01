@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shades of Bharat — Konark Chakra Home</title>
+<meta name="description" content="A standalone Shades of Bharat homepage concept using the Konark Chakra as an interactive chapter navigation wheel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=EB+Garamond:wght@400;500;600&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#3b2013; --wine:#68150e; --maroon:#7d2317; --sindoor:#9c3c2c;
+  --gold:#bc8739; --gold2:#dfbd73; --paper:#f2deb3; --paper2:#e3c184;
+  --stone:#8b5729; --stone2:#c9964d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'EB Garamond',Georgia,serif;background:#d7b677;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.page{min-height:100vh;position:relative;background:
+radial-gradient(circle at 46% 10%,rgba(255,250,230,.9),transparent 35%),
+repeating-linear-gradient(0deg,rgba(75,44,20,.018) 0 1px,transparent 1px 4px),
+linear-gradient(90deg,#d4b16f 0,#edd5a6 4%,#f7e8c7 16%,#f8e9c9 82%,#e8c990 96%,#d1ac68 100%)}
+.page:before,.page:after{content:"";position:fixed;z-index:60;top:0;bottom:0;width:9px;background:linear-gradient(90deg,#35170c,#a16c2d 48%,#e2bd6a 56%,#4a2613);box-shadow:0 0 15px rgba(48,24,10,.35)}
+.page:before{left:0}.page:after{right:0;transform:scaleX(-1)}
+.ornament{height:16px;background:linear-gradient(90deg,#452415,#8f3a27 20%,#ce9d4c 50%,#8f3a27 80%,#452415);position:relative}
+.ornament:after{content:"✦  ❖  ✦  ॐ  ✦  ❖  ✦";position:absolute;inset:0;display:grid;place-items:center;color:#f0d496;font-size:9px;letter-spacing:.4em}
+.nav{max-width:1530px;margin:auto;padding:17px 34px 13px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;border-bottom:1px solid rgba(113,70,30,.32)}
+.brand{display:flex;align-items:center;gap:13px;white-space:nowrap}.brand img{width:64px;height:64px;border-radius:50%;padding:5px;background:#6b1812;border:2px solid var(--gold2);box-shadow:0 3px 8px rgba(70,32,12,.22)}
+.brand-name{font:700 31px/1 'Cormorant Garamond',serif;letter-spacing:.025em;color:#53170f}.tag{margin-top:5px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#795537}
+.links{display:flex;justify-content:center;gap:24px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}.links a{padding:7px 0;position:relative}.links a:after{content:"";position:absolute;bottom:1px;left:50%;right:50%;height:1px;background:var(--maroon);transition:.25s}.links a:hover:after{left:0;right:0}
+.lang{border:1px solid #9c7139;padding:8px 13px;background:rgba(246,228,191,.6);font:13px 'Hind',serif;color:#6a3820}
+.hero{max-width:1530px;margin:auto;padding:25px 34px 18px;display:grid;grid-template-columns:minmax(330px,.67fr) minmax(790px,1.5fr);gap:24px;align-items:center}
+.copy{padding:35px 5px 30px 22px}.welcome{font:italic 30px 'Cormorant Garamond';color:#6a3420}.copy h1{font:700 clamp(64px,6.1vw,104px)/.84 'Cormorant Garamond';margin:5px 0 22px;color:#59160e}.rule{width:300px;height:18px;border-bottom:1px solid #aa7c3e;position:relative}.rule:after{content:"❈";position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);padding:0 9px;background:#f2deb4;color:#9a3b2b}.sub{margin-top:24px;font-size:18px;line-height:1.45;letter-spacing:.09em;text-transform:uppercase}.desc{max-width:400px;font-size:18px;line-height:1.5;color:#63482f}.cta{display:inline-flex;align-items:center;gap:18px;margin-top:14px;padding:13px 26px;color:#f4d99e;background:linear-gradient(#86271c,#63140f);border:1px solid #4e180f;box-shadow:inset 0 0 0 3px rgba(217,171,79,.22),0 5px 12px rgba(56,25,11,.18);font-size:13px;letter-spacing:.09em;text-transform:uppercase}.quote{margin-top:28px;padding-left:18px;border-left:2px solid #bc8537;font:18px/1.45 'Hind',serif;color:#783023}.quote small{display:block;font:13px 'EB Garamond';color:#765637;margin-top:4px}
+.stage{position:relative;height:785px;overflow:hidden;border:1px solid #986a34;border-radius:48% 48% 2% 2%/11% 11% 2% 2%;background:
+radial-gradient(circle at 50% 52%,rgba(255,241,202,.72),transparent 46%),
+linear-gradient(180deg,#efd9a9,#e1bc79 100%);box-shadow:inset 0 0 0 5px rgba(255,247,222,.34),0 16px 35px rgba(70,36,16,.14)}
+.stage:before{content:"";position:absolute;inset:16px;border:1px solid rgba(132,85,36,.35);border-radius:47% 47% 2% 2%/10% 10% 2% 2%;pointer-events:none}
+.title-badge{position:absolute;top:19px;left:50%;transform:translateX(-50%);z-index:14;text-align:center}.title-badge strong{display:block;font:600 italic 29px 'Cormorant Garamond';color:#612315}.title-badge span{font:12px 'Hind';letter-spacing:.08em;color:#7a5232}
+.wheel-wrap{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);width:610px;height:610px}
+.wheel{position:absolute;inset:20px;border-radius:50%;background:radial-gradient(circle at 47% 43%,#c99852 0,#a56b30 48%,#75431e 100%);border:20px solid #74431f;box-shadow:inset 0 0 0 7px #c6954a,inset 0 0 0 22px #865122,0 16px 28px rgba(64,30,11,.25)}
+.wheel:before{content:"";position:absolute;inset:50px;border-radius:50%;border:13px solid #815022;box-shadow:0 0 0 6px #c3924b,inset 0 0 0 6px #bb8840}
+.wheel:after{content:"";position:absolute;inset:150px;border-radius:50%;border:9px solid #7d4b20;box-shadow:0 0 0 7px #bc8b45}
+.rim-dots{position:absolute;inset:34px;border-radius:50%;border:5px dotted rgba(239,195,109,.75)}
+.inner-dots{position:absolute;inset:102px;border-radius:50%;border:4px dotted rgba(236,189,95,.65)}
+.spoke{position:absolute;z-index:4;left:50%;top:50%;width:205px;height:20px;transform-origin:0 50%;background:linear-gradient(#d1a35c,#7e4b20 50%,#d2a65e);border-radius:11px;box-shadow:0 2px 4px rgba(58,27,10,.4)}
+.spoke:before{content:"";position:absolute;left:52px;top:-10px;width:39px;height:39px;border-radius:50%;border:6px double #d1a35a;background:#805024}.spoke:after{content:"";position:absolute;right:-10px;top:-8px;width:36px;height:36px;border-radius:50%;border:5px double #c7984f;background:#7d4d21}
+.s1{transform:rotate(-90deg)}.s2{transform:rotate(-45deg)}.s3{transform:rotate(0)}.s4{transform:rotate(45deg)}.s5{transform:rotate(90deg)}.s6{transform:rotate(135deg)}.s7{transform:rotate(180deg)}.s8{transform:rotate(225deg)}
+.hub{position:absolute;z-index:9;left:50%;top:50%;transform:translate(-50%,-50%);width:125px;height:125px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#932b1e 0 45%,#5a130d 47%);border:8px double #dfa954;color:#f3c86d;font:46px 'Hind';box-shadow:0 5px 15px rgba(46,18,8,.45)}
+.chapter{position:absolute;z-index:15;width:150px;min-height:99px;padding:14px 10px 11px;text-align:center;background:linear-gradient(#f9e8c3,#e4c184);border:1px solid #7f5429;box-shadow:inset 0 0 0 4px rgba(255,247,222,.45),0 7px 16px rgba(62,30,12,.2);clip-path:polygon(14% 0,86% 0,100% 12%,100% 88%,86% 100%,14% 100%,0 88%,0 12%);transition:.22s ease}.chapter:hover{background:#fff0cb;filter:brightness(1.04);transform:scale(1.08);z-index:20}.chapter .ico{font:24px 'Hind';color:#7b2319;line-height:1}.chapter b{display:block;margin-top:5px;font:600 18px/1.05 'Cormorant Garamond';color:#4f2315}.chapter span{display:block;margin-top:5px;font:12px/1.2 'Hind';color:#8b3829}.chapter em{display:block;font:11px/1.2 'EB Garamond';color:#705239;margin-top:2px;font-style:normal}
+.c1{left:50%;top:82px;transform:translateX(-50%)}.c1:hover{transform:translateX(-50%) scale(1.08)}
+.c2{right:57px;top:152px}.c3{right:8px;top:50%;transform:translateY(-50%)}.c3:hover{transform:translateY(-50%) scale(1.08)}
+.c4{right:61px;bottom:84px}.c5{left:50%;bottom:21px;transform:translateX(-50%)}.c5:hover{transform:translateX(-50%) scale(1.08)}
+.c6{left:61px;bottom:84px}.c7{left:8px;top:50%;transform:translateY(-50%)}.c7:hover{transform:translateY(-50%) scale(1.08)}
+.c8{left:57px;top:152px}
+.corner-art{position:absolute;color:#6f381c;opacity:.63;font-size:58px;z-index:3}.temple{right:24px;bottom:28px;font-size:86px}.peacock{right:18px;top:230px;font-size:74px}.diya{left:22px;bottom:25px;font-size:58px}.hint{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);z-index:18;font-size:11px;letter-spacing:.08em;color:#68482e;white-space:nowrap}
+.footer{margin-top:8px;border-top:1px solid rgba(111,70,30,.35);padding:20px;text-align:center;color:#6e5034;font-size:13px}.footer strong{color:#74251c}
+@media(max-width:1250px){.nav{grid-template-columns:auto 1fr}.lang{display:none}.hero{grid-template-columns:1fr}.copy{text-align:center;padding-left:5px}.rule{margin:auto}.desc{margin-left:auto;margin-right:auto}.stage{max-width:900px;width:100%;margin:auto}}
+@media(max-width:760px){.nav{display:flex;flex-direction:column}.links{flex-wrap:wrap;gap:13px}.hero{padding:16px 10px}.stage{height:670px}.wheel-wrap{width:445px;height:445px}.wheel{inset:18px;border-width:15px}.wheel:before{inset:38px;border-width:10px}.wheel:after{inset:108px}.spoke{width:145px;height:15px}.spoke:before{left:35px;width:29px;height:29px;top:-7px}.spoke:after{width:28px;height:28px;top:-6px}.hub{width:92px;height:92px;font-size:34px}.chapter{width:116px;min-height:82px;padding:9px 5px}.chapter b{font-size:15px}.chapter em{display:none}.c1{top:70px}.c2{right:20px;top:135px}.c3{right:2px}.c4{right:20px;bottom:70px}.c5{bottom:12px}.c6{left:20px;bottom:70px}.c7{left:2px}.c8{left:20px;top:135px}.corner-art{display:none}}
+@media(max-width:500px){.brand img{width:52px;height:52px}.brand-name{font-size:24px}.tag{font-size:8px}.links{display:none}.copy h1{font-size:60px}.stage{height:610px}.wheel-wrap{width:355px;height:355px}.spoke{width:110px}.chapter{width:103px;min-height:70px}.chapter .ico{font-size:18px}.chapter span{font-size:10px}.c1{top:62px}.c2{right:4px;top:126px}.c4{right:4px;bottom:63px}.c5{bottom:10px}.c6{left:4px;bottom:63px}.c8{left:4px;top:126px}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="ornament"></div>
+<nav class="nav">
+  <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Shades of Bharat logo"><div><div class="brand-name">SHADES OF BHARAT</div><div class="tag">Where Every Thread Tells a Story</div></div></a>
+  <div class="links"><a href="index.html">Home</a><a href="#chakra">Chapters</a><a href="chapters/bhoomi-bibidhta.html">Bharatvarsha</a><a href="chapters/itihasa.html">Itihasa</a><a href="chapters/kala-nirman.html">Kala</a><a href="chapters/tirtha-devalaya.html">Tirtha</a></div>
+  <div class="lang">संस्कृतम् ▾</div>
+</nav>
+<main class="hero">
+<section class="copy">
+  <div class="welcome">Welcome to</div>
+  <h1>Bharatvarsha</h1>
+  <div class="rule"></div>
+  <div class="sub">A Civilizational Journey<br>Through Time &amp; Tradition</div>
+  <p class="desc">Explore the timeless wisdom, living heritage, sacred knowledge, artistic traditions and diverse landscapes that have shaped the civilizational story of Bharat.</p>
+  <a class="cta" href="#chakra">Begin the Journey <span>→</span></a>
+  <div class="quote">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत<small>Arise, awake, and learn from the wise.</small></div>
+</section>
+<section class="stage" id="chakra">
+  <div class="title-badge"><strong>Konark Chakra</strong><span>ज्ञानचक्र · THE WHEEL OF KNOWLEDGE</span></div>
+  <div class="corner-art temple">🛕</div><div class="corner-art peacock">🦚</div><div class="corner-art diya">🪔</div>
+  <div class="wheel-wrap" aria-hidden="true">
+    <div class="wheel"><div class="rim-dots"></div><div class="inner-dots"></div><i class="spoke s1"></i><i class="spoke s2"></i><i class="spoke s3"></i><i class="spoke s4"></i><i class="spoke s5"></i><i class="spoke s6"></i><i class="spoke s7"></i><i class="spoke s8"></i><div class="hub">ॐ</div></div>
+  </div>
+  <a class="chapter c1" href="chapters/itihasa.html"><div class="ico">ध</div><b>Itihasa</b><span>इतिहास</span><em>History &amp; civilizational memory</em></a>
+  <a class="chapter c2" href="chapters/rishi-parampara.html"><div class="ico">ऋ</div><b>Rishi Parampara</b><span>ऋषि परम्परा</span><em>Sages &amp; wisdom traditions</em></a>
+  <a class="chapter c3" href="chapters/gyan-vigyan.html"><div class="ico">ज्ञ</div><b>Gyan-Vigyan</b><span>ज्ञान-विज्ञान</span><em>Science, knowledge &amp; inquiry</em></a>
+  <a class="chapter c4" href="chapters/kala-nirman.html"><div class="ico">क</div><b>Kala &amp; Nirman</b><span>कला एवं निर्माण</span><em>Art, architecture &amp; crafts</em></a>
+  <a class="chapter c5" href="chapters/utsav-parva.html"><div class="ico">दी</div><b>Utsav Vaibhavam</b><span>उत्सव एवं पर्व</span><em>Festivals &amp; celebrations</em></a>
+  <a class="chapter c6" href="chapters/tirtha-devalaya.html"><div class="ico">श्री</div><b>Tirtha Darshan</b><span>तीर्थ एवं देवालय</span><em>Sacred places &amp; pilgrimage</em></a>
+  <a class="chapter c7" href="chapters/jeevan-shaili.html"><div class="ico">गृ</div><b>Bharatiya Jeevan</b><span>जीवन शैली</span><em>Life, family &amp; living traditions</em></a>
+  <a class="chapter c8" href="chapters/dharma-shastra.html"><div class="ico">ॐ</div><b>Dharma &amp; Shastra</b><span>धर्म एवं शास्त्र</span><em>Values, scriptures &amp; philosophy</em></a>
+  <div class="hint">Choose a spoke of the Chakra to enter a chapter</div>
+</section>
+</main>
+<footer class="footer"><strong>Shades of Bharat</strong> · A civilizational journey through knowledge, memory, craft and place.</footer>
+<div class="ornament"></div>
+</div>
+</body>
+</html>
