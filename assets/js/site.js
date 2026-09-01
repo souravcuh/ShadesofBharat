@@ -1,3 +1,16 @@
+// Bharatiya chapter skin — automatically enabled for every page inside /chapters/.
+(function () {
+  if (location.pathname.indexOf('/chapters/') === -1) return;
+  document.documentElement.classList.add('sob-chapter-page');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '../assets/css/chapter-bharatiya.css?v=1';
+  document.head.appendChild(link);
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('sob-chapter');
+  });
+})();
+
 // Shades of Bharat — language switching (Sanskrit / Hindi / Russian / English)
 // Nav labels are translated on every page. Hero copy is translated on the home page only
 // (elements carry data-i18n="hero.title" etc.). Deeper chapter content is not yet translated —
@@ -202,7 +215,6 @@
     });
   }
 
-  // Tries each extension in turn for one numbered slot; resolves with the first that loads.
   function tryExtensions(base) {
     var chain = Promise.resolve(null);
     EXTENSIONS.forEach(function (ext) {
