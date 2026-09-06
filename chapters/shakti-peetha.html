@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>शक्ति पीठ · 51 Śākta Pīṭhas · Shades of Bharat</title>
+<meta name="description" content="An editable, source-aware presentation of the 51 Śākta Pīṭhas in the Pīṭhanirṇaya / Mahāpīṭhanirūpaṇa tradition, with Devī, Bhairava, aṅga and respectful notes on variant identifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hind:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#382016;--maroon:#6f201b;--sindoor:#963326;--gold:#b37b2f;--paper:#f7e8c5;--cream:#fff6df;--muted:#75513a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;background:
+repeating-linear-gradient(0deg,rgba(74,40,17,.018) 0 1px,transparent 1px 5px),
+linear-gradient(90deg,#d8b56f,#f2dfb4 7%,#f9edd2 50%,#f1dcae 93%,#d7b26a)}
+a{color:inherit}
+.shell{width:min(1220px,calc(100% - 30px));margin:auto}
+.top{height:7px;background:linear-gradient(90deg,#451811,#9b3427,#d3a34d,#9b3427,#451811)}
+.nav{position:sticky;top:0;z-index:40;background:#5f1e19f2;color:#f4deb1;border-bottom:1px solid #d1a253}
+.nav .shell{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:700;letter-spacing:.08em}
+.brand img{width:44px;height:44px}
+.navlinks{display:flex;gap:19px;font-family:"Hind";font-size:14px}
+.navlinks a{text-decoration:none}
+.hero{text-align:center;padding:68px 20px 42px}
+.hero .dev{font-family:"Noto Serif Devanagari";font-size:22px;color:var(--sindoor)}
+.hero h1{font-size:clamp(54px,7vw,86px);line-height:.95;margin:8px 0 13px;color:#4a2016}
+.hero h1 span{display:block;font-family:"Noto Serif Devanagari";font-size:.45em;margin-top:12px;color:#812a21}
+.hero p{max-width:900px;margin:auto;font-family:"Hind";font-size:17px;line-height:1.8}
+.alpana{height:42px;background:#77261f;position:relative;border-block:1px solid #c7923e;overflow:hidden}
+.alpana:before{content:"";position:absolute;inset:6px 0;background:
+radial-gradient(circle at 12px 14px,transparent 0 4px,#e7c574 4.5px 5.5px,transparent 6px) 0 0/30px 28px,
+linear-gradient(45deg,transparent 45%,#e7c574 46% 50%,transparent 51%) 0 0/30px 28px,
+linear-gradient(-45deg,transparent 45%,#e7c574 46% 50%,transparent 51%) 15px 0/30px 28px;opacity:.78}
+.context{padding:58px 0 28px}
+.context-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+.box{background:#f8e9c9c7;border:1px solid #9c6834;padding:27px 29px;box-shadow:inset 0 0 0 5px #fff8e35c}
+.box h2{font-size:38px;margin:0 0 9px;color:#4b2117}
+.box p,.box li{font-family:"Hind";line-height:1.72;font-size:14px}
+.note{border-left:4px solid var(--sindoor);padding:15px 17px;background:#fff7e3c4;font-family:"Hind";line-height:1.65;font-size:13px}
+.tools{padding:25px 0 18px;position:sticky;top:72px;z-index:20;background:linear-gradient(#f4e2bbfa,#f4e2bbe8);border-bottom:1px solid #a36f39}
+.tools-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{flex:1;min-width:240px;padding:12px 14px;border:1px solid #9d6834;background:#fff9e8;font-family:"Hind";font-size:14px;color:#3f2618}
+.filter{border:1px solid #9d6834;background:#f9ebcc;padding:10px 12px;font-family:"Hind";cursor:pointer;color:#5c2a1d}
+.filter.active{background:#77261f;color:#f6dfad;border-color:#77261f}
+.count{font-family:"Hind";font-size:13px;color:#74462e;margin-left:auto}
+.list-wrap{padding:35px 0 80px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.peetha{position:relative;background:linear-gradient(145deg,#fff8e6,#efd9a9);border:1px solid #9a6432;padding:26px 25px 23px;overflow:hidden;box-shadow:0 10px 24px rgba(69,35,17,.10)}
+.peetha:before{content:"";position:absolute;inset:7px;border:1px solid #b17a3c80;pointer-events:none;background:
+radial-gradient(circle at 12px 12px,transparent 0 5px,#8e3024 5.5px 6.5px,transparent 7px),
+radial-gradient(circle at calc(100% - 12px) 12px,transparent 0 5px,#8e3024 5.5px 6.5px,transparent 7px),
+radial-gradient(circle at 12px calc(100% - 12px),transparent 0 5px,#b17534 5.5px 6.5px,transparent 7px),
+radial-gradient(circle at calc(100% - 12px) calc(100% - 12px),transparent 0 5px,#b17534 5.5px 6.5px,transparent 7px)}
+.peetha > *{position:relative;z-index:2}
+.head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.no{font-family:"Hind";font-size:11px;letter-spacing:.12em;color:#9b3a29}
+.peetha h3{font-size:31px;line-height:1.05;margin:4px 0 5px;color:#4b2116}
+.loc{font-family:"Hind";font-size:12.5px;color:#805039;margin-bottom:15px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.fact{border-top:1px solid #b9854d;padding-top:9px}
+.fact b{display:block;font-family:"Hind";font-size:10px;letter-spacing:.08em;color:#9a3828;text-transform:uppercase;margin-bottom:4px}
+.fact span{font-size:15px}
+.variant{display:inline-block;font-family:"Hind";font-size:10px;background:#7e2a21;color:#f5dfb0;padding:4px 7px;margin-top:2px}
+.vnote{font-family:"Hind";font-size:12.5px;line-height:1.6;margin:14px 0 0;padding:11px 12px;background:#fff7e4ab;border-left:3px solid #9b3a29;color:#62422f}
+.empty{display:none;text-align:center;padding:50px;font-family:"Hind"}
+.sources{padding:50px 0 80px;border-top:1px solid #9d6b38}
+.sources h2{font-size:46px;margin:0 0 13px}
+.sources ol{padding-left:23px}
+.sources li{font-family:"Hind";font-size:14px;line-height:1.7;margin-bottom:13px}
+.sources a{color:#74251e}
+.footer{background:#321811;color:#e4c999;text-align:center;padding:30px 20px;font-family:"Hind";font-size:13px}
+@media(max-width:860px){.navlinks{display:none}.context-grid,.grid{grid-template-columns:1fr}.tools{top:72px}.facts{grid-template-columns:1fr}.count{width:100%;margin-left:0}.hero{padding-top:50px}}
+</style>
+</head>
+<body>
+<div class="top"></div>
+<nav class="nav"><div class="shell"><a class="brand" href="../index.html"><img src="../assets/img/logo.svg" alt=""><span>SHADES OF BHARAT</span></a><div class="navlinks"><a href="tirtha-devalaya.html">Tirtha Darshan</a><a href="#list">51 Pīṭhas</a><a href="#sources">Sources</a></div></div></nav>
+<header class="hero">
+  <div class="dev">॥ या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता ॥</div>
+  <h1>Śākta Pīṭhas<span>शक्ति पीठ</span></h1>
+  <p>This page presents the <strong>51-Pīṭha tradition of the Pīṭhanirṇaya / Mahāpīṭhanirūpaṇa</strong>. Each entry keeps the textual Pīṭha name, associated aṅga, Devī and Bhairava editable as text. Living regional identifications are respected, and places where manuscripts or traditions differ are marked rather than forced into a single claim.</p>
+</header>
+<div class="alpana" aria-hidden="true"></div>
+
+<section class="context"><div class="shell context-grid">
+  <article class="box">
+    <h2>Why 51 here?</h2>
+    <p>The Śākta Pīṭha tradition is transmitted in more than one enumeration. The <em>Pīṭhanirṇaya</em>, also known as the <em>Mahāpīṭhanirūpaṇa</em>, is a major textual tradition that gives fifty-one Pīṭhas together with the associated Devī, Bhairava and aṅga. D. C. Sircar prepared a critical edition from multiple manuscripts and related textual materials.</p>
+    <div class="note"><strong>Devotional respect:</strong> a “variant” label does not mean a temple or regional belief is being rejected. It means that more than one honoured textual or living tradition survives, and Shades of Bharat will present those traditions side by side.</div>
+  </article>
+  <aside class="box">
+    <h2>Other sacred enumerations</h2>
+    <p>The <em>Devī Bhāgavata Purāṇa</em>, Book 7, Chapter 30, preserves a wider enumeration of <strong>108 Pīṭhas</strong>. Other Śākta, Purāṇic and regional traditions use additional counts. Therefore this page should be read as the complete <strong>51-Pīṭha register of the selected textual tradition</strong>, not as a declaration that other sacred enumerations are invalid.</p>
+    <p>Detailed temple histories, photographs, local sthala-purāṇa traditions and architectural notes will be added individually after source verification.</p>
+  </aside>
+</div></section>
+
+<section class="tools" id="list"><div class="shell tools-row">
+  <input id="search" class="search" type="search" placeholder="Search Pīṭha, location, Devī, Bhairava or aṅga…" aria-label="Search Shakti Peethas">
+  <button class="filter active" data-mode="all">All 51</button>
+  <button class="filter" data-mode="clear">Clear identifications</button>
+  <button class="filter" data-mode="variant">Variant / debated</button>
+  <span class="count" id="count">51 entries</span>
+</div></section>
+
+<main class="list-wrap"><div class="shell"><div id="grid" class="grid"></div><div id="empty" class="empty">No matching Pīṭha found.</div></div></main>
+
+<section class="sources" id="sources"><div class="shell">
+  <h2>References & Textual Basis</h2>
+  <ol>
+    <li><strong>Pīṭhanirṇaya / Mahāpīṭhanirūpaṇa.</strong> Critical text in Dineschandra Sircar, <em>The Śākta Pīṭhas</em>, 2nd revised edition, Motilal Banarsidass, Delhi, 1973 (first study/edition published 1948). Sircar's edition collates multiple manuscripts and discusses the development and variation of Pīṭha lists.</li>
+    <li>D. C. Sircar, <em>The Śākta Pīṭhas</em>. Bibliographic record: <a href="https://books.google.com/books?id=7vkZAAAAMAAJ" target="_blank" rel="noopener">Google Books</a>; library record: <a href="https://kncat.ignca.gov.in/bib/44821" target="_blank" rel="noopener">IGNCA Central Library</a>.</li>
+    <li><strong>Śrīmad Devī Bhāgavatam</strong>, Skandha 7, Chapter 30, especially the concluding enumeration describing 108 Pīṭhas. This parallel Purāṇic tradition is cited to make clear that sacred enumerations differ across texts.</li>
+    <li>For manuscript variants and the history of the Pīṭha corpus, individual profiles will consult the Sanskrit text, Sircar's apparatus, later critical scholarship, inscriptions/temple records where available, and the living temple tradition itself.</li>
+  </ol>
+  <div class="note"><strong>Editorial method:</strong> Veda, Itihāsa, Purāṇa, Tantra, Āgama, Rishi/Āchārya traditions, inscriptions and modern historical scholarship will be cited only where they actually speak to the specific claim. Antiquity will never be manufactured by attaching an unrelated Vedic reference to a later Pīṭha tradition.</div>
+</div></section>
+
+<footer class="footer">Shades of Bharat · शक्ति पीठ · श्रद्धा के साथ स्रोतों का सम्मान · Tradition respected, textual variants documented.</footer>
+
+<script>
+const PEETHAS = [[1,"Hiṅgulā","Hinglaj, Balochistan, Pakistan","Brahmarandhra (crown aperture)","Koṭṭarī","Bhīmalocana",false,""],[2,"Karavīra","Karavīra/Kolhapur region, Maharashtra, India","Trinetra (three eyes)","Mahiṣamardinī","Krodhīśa",true,"Modern shrine identification varies across traditions."],[3,"Sugandhā","Barishal region, Bangladesh","Nāsikā (nose)","Sunandā","Tryambaka",false,""],[4,"Kāśmīra","Kashmir region","Kaṇṭha (throat)","Mahāmāyā","Trisandhyeśvara",true,"The textual pīṭha is Kāśmīra; identification with a specific present-day shrine varies."],[5,"Jvālāmukhī","Kangra region, Himachal Pradesh, India","Jihvā (tongue)","Siddhidā","Unmatta",false,""],[6,"Jālandhara","Jalandhar region, Punjab, India","Stana (breast)","Tripuramālinī","Bhīṣaṇa",false,""],[7,"Vaidyanātha","Deoghar, Jharkhand, India — widely identified","Hṛdaya (heart)","Jayadurgā","Vaidyanātha",false,""],[8,"Nepāla","Guhyeśvarī, Kathmandu Valley, Nepal","Jānu (knee)","Mahāmāyā","Kapālī",false,""],[9,"Mānasa","Kailāsa–Mānasarovara region, Tibet/China","Dakṣiṇa-hasta (right hand)","Dākṣāyaṇī","Hara",false,""],[10,"Virajā-kṣetra / Utkala tradition","Odisha, India","Nābhi (navel)","Vimalā","Jagannātha",true,"Odisha traditions preserve more than one important identification; Puri/Vimalā and Virajā/Birajā associations should be discussed separately in the detailed profile."],[11,"Gaṇḍakī","Gaṇḍakī–Muktināth region, Nepal","Gaṇḍa (cheek)","Gaṇḍakī","Cakrapāṇi",false,""],[12,"Bāhulā","Ketugram, Purba Bardhaman, West Bengal, India","Vāma-bāhu (left arm)","Bāhulā","Bhīruka",false,""],[13,"Ujānī","Mangalkot region, Purba Bardhaman, West Bengal, India","Kūrpara (elbow)","Maṅgalācaṇḍī","Kapileśvara",false,""],[14,"Caṭṭala","Chandranāth/Chattogram region, Bangladesh","Dakṣiṇa-bāhu (right arm)","Bhavānī","Candraśekhara",false,""],[15,"Tripurā","Udaipur, Tripura, India","Dakṣiṇa-pāda (right foot)","Tripurasundarī","Tripureśa",false,""],[16,"Trisrotā","North Bengal / Jalpaiguri region, India","Vāma-pāda (left foot)","Bhrāmarī","Īśvara",false,""],[17,"Kāmagiri / Kāmarūpa","Kāmākhyā, Guwahati, Assam, India","Yoni","Kāmākhyā","Umānanda",false,""],[18,"Yugādyā","Kṣīragrāma/Khirgram, West Bengal, India","Dakṣiṇa-pādāṅguṣṭha (right big toe)","Yugādyā","Kṣīrakhaṇḍa",false,""],[19,"Kālīpīṭha","Kalighat, Kolkata, West Bengal, India","Dakṣiṇa-pādāṅguli (toes of right foot)","Kālī / Kālikā","Nakuleśa",false,""],[20,"Prayāga","Prayagraj, Uttar Pradesh, India","Hasta-aṅguli (fingers of the hand)","Lalitā","Bhava",true,"Local traditions associate more than one Devi shrine in Prayagraj with the Pīṭha."],[21,"Jayantī","Jaintia/Meghalaya region, India","Vāma-jaṅghā (left lower leg)","Jayantī","Kramadīśvara",true,"Modern site identification varies in regional traditions."],[22,"Kirīṭa / Kirīṭakoṇā","Kirīteśvarī, Murshidabad, West Bengal, India","Kirīṭa (crown/diadem)","Bhuvaneśī","Siddhirūpa",false,""],[23,"Maṇikarṇikā","Varanasi, Uttar Pradesh, India","Kuṇḍala (ear ornament)","Viśālākṣī","Kāla",false,""],[24,"Kanyāśrama","Kanyakumari region, Tamil Nadu, India","Pṛṣṭha (back)","Sarvāṇī","Nimiṣa",true,"The exact modern identification has variants."],[25,"Kurukṣetra","Devī-kūpa/Bhadrakālī tradition, Haryana, India","Dakṣiṇa-gulpha (right ankle)","Sāvitrī","Sthāṇu",false,""],[26,"Maṇiveda / Maṇibandha","Pushkar region, Rajasthan, India","Maṇibandha (wrist)","Gāyatrī","Sarvānanda",false,""],[27,"Śrīśaila","Traditional identification varies; Sylhet and other locations occur in later traditions","Grīvā (neck)","Mahālakṣmī","Saṃvarānanda",true,"Do not confuse this textual entry automatically with every modern place called Śrīśaila; manuscript and regional identifications require separate treatment."],[28,"Kāñcī","Traditional identification varies","Kaṅkāla (skeleton/waist-bone tradition)","Devagarbhā","Ruru",true,"Some later Bengali traditions connect this entry with Kankālītalā; the identification is not uniform."],[29,"Kālamādhava","Amarkantak region, Madhya Pradesh, India — traditional identification","Nitamba (buttock)","Kālī","Asitāṅga",true,"Exact site identification varies."],[30,"Narmadā","Narmadā/Amarkantak region, India","Nitamba (buttock)","Śoṇā","Bhadrasena",true,"Exact site identification varies."],[31,"Rāmagiri","Chitrakoot region, Madhya Pradesh/Uttar Pradesh, India","Stana (breast)","Śivānī","Caṇḍa",true,"The wider Chitrakoot/Rāmagiri identification is traditional; specific shrine claims vary."],[32,"Vṛndāvana","Vrindavan, Uttar Pradesh, India","Keśa (hair)","Umā","Bhūteśa",false,""],[33,"Śuci","Suchindram, Tamil Nadu, India","Ūrdhva-danta (upper teeth)","Nārāyaṇī","Saṃhāra",false,""],[34,"Pañcasāgara","Present-day location uncertain / disputed","Adho-danta (lower teeth)","Vārāhī","Mahārudra",true,"The textual name is clear, but modern geographical identification is not uniform."],[35,"Karatoyātaṭa","Bhabanipur / Karatoya region, Bangladesh","Vāma-karṇa (left ear)","Aparṇā","Vāmana",false,""],[36,"Śrīparvata","Śrīśailam, Andhra Pradesh, India — common identification","Dakṣiṇa-karṇa (right ear)","Sundarī","Sundarānanda",true,"This entry should be kept distinct from no. 27 Śrīśaila when discussing textual variants."],[37,"Vibhāsa","Tamluk, West Bengal, India","Vāma-gulpha (left ankle)","Bhīmarūpā","Kapālī",false,""],[38,"Prabhāsa","Prabhāsa/Somnath region, Gujarat, India","Udara (abdomen)","Candrabhāgā","Vakratuṇḍa",false,""],[39,"Bhairavaparvata","Ujjain, Madhya Pradesh, India","Ūrdhva-oṣṭha (upper lip)","Avantī","Lambakarṇa",false,""],[40,"Janasthāna","Nashik region, Maharashtra, India","Cibuka (chin)","Bhrāmarī","Vikṛta",false,""],[41,"Godāvarītīra","Godāvarī river region, India","Vāma-gaṇḍa (left cheek)","Viśveśī","Viśveśa",true,"Manuscripts and later traditions preserve variant names and more than one modern location."],[42,"Ratnāvalī","Hooghly region, West Bengal, India — one living identification","Dakṣiṇa-skandha (right shoulder)","Kumārī","Śiva",true,"Modern location identification varies."],[43,"Mithilā","Mithila region across Bihar–Nepal cultural geography","Vāma-skandha (left shoulder)","Umā","Mahodara",true,"Different temples in the Mithila region are associated with this Pīṭha."],[44,"Nalāhāṭī","Nalhati, Birbhum, West Bengal, India","Nalā (traditional anatomical term)","Kālī","Yogīśa / Yogeśa",true,"The Sanskrit/Bengali term nalā has been interpreted as a long bone or tubular organ; the website will preserve the textual term rather than force a single anatomical translation."],[45,"Kālīghāṭa / Karṇāṭa manuscript variant","Modern identification varies by recension","Muṇḍa (head/skull) in one reading","Jayadurgā","Krodhīśa / Krodheśa",true,"Sircar records a manuscript variant reading Karṇāṭa with a different associated body-part/Bhairava formulation. This entry must therefore be presented as a textual variant, not forced into one modern temple."],[46,"Vakreśvara","Bakreshwar, Birbhum, West Bengal, India","Manas (mind)","Mahiṣamardinī","Vakranātha",false,""],[47,"Yaśora","Jashore/Khulna region, Bangladesh","Pāṇi (hand)","Yaśoreśvarī","Caṇḍa",false,""],[48,"Aṭṭahāsa","West Bengal, India","Oṣṭha (lip)","Phullarā","Viśveśa",true,"More than one local tradition identifies the precise site of Aṭṭahāsa."],[49,"Nandipura","Sainthia, Birbhum, West Bengal, India","Hāra (necklace)","Nandinī","Nandikeśvara",false,""],[50,"Laṅkā","Sri Lanka","Nūpura (anklet)","Indrākṣī","Rākṣaseśvara",true,"Later traditions propose different Sri Lankan shrine identifications; the textual pīṭha is Laṅkā."],[51,"Virāṭa","Rajasthan, India — traditional regional identification","Padāṅguli (toe)","Ambikā","Amṛta",true,"The precise present-day site is not universally agreed."]];
+const grid=document.getElementById('grid'), search=document.getElementById('search'), count=document.getElementById('count'), empty=document.getElementById('empty');
+let mode='all';
+
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+function card(p){
+  const [n,name,loc,anga,devi,bhairava,variant,note]=p;
+  return `<article class="peetha" data-variant="${variant?'1':'0'}">
+    <div class="head"><div><div class="no">PĪṬHA ${String(n).padStart(2,'0')}</div><h3>${esc(name)}</h3></div>${variant?'<span class="variant">VARIANT NOTED</span>':''}</div>
+    <div class="loc">${esc(loc)}</div>
+    <div class="facts">
+      <div class="fact"><b>Aṅga / Tradition</b><span>${esc(anga)}</span></div>
+      <div class="fact"><b>Devī</b><span>${esc(devi)}</span></div>
+      <div class="fact"><b>Bhairava</b><span>${esc(bhairava)}</span></div>
+    </div>
+    ${note?`<p class="vnote">${esc(note)}</p>`:''}
+  </article>`;
+}
+function render(){
+  const q=search.value.trim().toLowerCase();
+  const rows=PEETHAS.filter(p=>{
+    const hay=p.slice(1,6).join(' ').toLowerCase()+' '+(p[7]||'').toLowerCase();
+    const textok=!q||hay.includes(q);
+    const modeok=mode==='all'||(mode==='variant'&&p[6])||(mode==='clear'&&!p[6]);
+    return textok&&modeok;
+  });
+  grid.innerHTML=rows.map(card).join('');
+  count.textContent=rows.length+' '+(rows.length===1?'entry':'entries');
+  empty.style.display=rows.length?'none':'block';
+}
+search.addEventListener('input',render);
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');mode=b.dataset.mode;render();
+}));
+render();
+</script>
+</body>
+</html>
