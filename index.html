@@ -3,67 +3,271 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Shades of Bharat — Bharatvarsha</title>
-<meta name="description" content="Shades of Bharat — a civilizational journey through Bharatvarsha, its history, sages, knowledge, sacred places, arts, festivals and living traditions.">
+<title>Shades of Bharat — Where Every Thread Tells a Story</title>
+<meta name="description" content="Shades of Bharat is an artistic journey through Bharatvarsha — its Itihasa, Rishi traditions, knowledge systems, arts, sacred geography, festivals and living culture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hind:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box}
-  html,body{margin:0;min-height:100%;background:#201307}
-  body{font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
-  .homepage{width:100%;min-height:100vh;display:flex;align-items:flex-start;justify-content:center;background:#201307}
-  .artboard{position:relative;width:min(100vw,1536px);aspect-ratio:3/2;margin:0 auto;overflow:hidden;background:#d7b16e}
-  .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
-  .hotspot{position:absolute;z-index:5;display:block;border-radius:16px;outline:0;background:rgba(255,255,255,0);transition:background .18s ease,box-shadow .18s ease,transform .18s ease}
-  .hotspot:hover,.hotspot:focus-visible{background:rgba(244,205,119,.08);box-shadow:0 0 0 2px rgba(125,72,20,.46),0 0 20px rgba(255,202,88,.42);transform:scale(1.015)}
-  .hotspot:focus-visible{outline:2px solid #f1c66c;outline-offset:2px}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  .nav-home{left:38.2%;top:3.1%;width:5.6%;height:4.5%}
-  .nav-chapters{left:44.1%;top:3.1%;width:8.1%;height:4.5%}
-  .nav-timeline{left:52.7%;top:3.1%;width:6.7%;height:4.5%}
-  .nav-gallery{left:60.2%;top:3.1%;width:6.3%;height:4.5%}
-  .nav-resources{left:67.1%;top:3.1%;width:7.8%;height:4.5%}
-  .nav-about{left:75.4%;top:3.1%;width:6.4%;height:4.5%}
-  .nav-contact{left:82.4%;top:3.1%;width:6.3%;height:4.5%}
-  .nav-language{left:90.7%;top:2.5%;width:7.0%;height:5.6%}
-  .begin{left:4.1%;top:57.1%;width:18.7%;height:5.9%;border-radius:28px}
-  .itihasa{left:45.2%;top:16.2%;width:10.2%;height:18.7%}
-  .utsav{left:30.6%;top:21.5%;width:10.5%;height:19.6%}
-  .rishi{left:59.2%;top:21.8%;width:9.8%;height:18.8%}
-  .tirtha{left:25.2%;top:43.6%;width:9.4%;height:20.0%}
-  .gyan{left:65.4%;top:43.5%;width:10.3%;height:19.8%}
-  .jeevan{left:30.2%;top:64.1%;width:10.4%;height:20.6%}
-  .dharma{left:44.8%;top:72.5%;width:10.8%;height:18.9%}
-  .kala{left:59.4%;top:64.0%;width:11.1%;height:20.8%}
-  .brand{left:2.3%;top:2.6%;width:33.0%;height:11.0%}
-  .bharatvarsha{left:2.6%;top:21.5%;width:24.0%;height:34.0%}
-  .temple{left:70.8%;top:10.0%;width:27.1%;height:52.0%}
-  @media (max-width:900px){body{background:#d6b26f}.homepage{min-height:auto}.artboard{width:100vw}.hotspot:hover{box-shadow:none;background:rgba(255,255,255,.02);transform:none}}
+:root{
+  --ink:#351b11;--maroon:#6f201b;--sindoor:#9f3528;--gold:#b07a2c;--gold2:#d7ae61;
+  --paper:#f4e3bc;--paper2:#ead19a;--cream:#fff6df;--leaf:#4c5d32;--shadow:#4a281742;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"Cormorant Garamond",Georgia,serif;background:
+  radial-gradient(circle at 14% 5%,#fff8e7 0 12rem,transparent 24rem),
+  radial-gradient(circle at 86% 20%,#f7e3b7 0 10rem,transparent 24rem),
+  repeating-linear-gradient(0deg,rgba(83,47,17,.018) 0 1px,transparent 1px 5px),
+  linear-gradient(90deg,#d7b269,#f1dcae 7%,#f8ecd0 50%,#efd8a8 93%,#d5ad64);
+  overflow-x:hidden;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;background:
+  radial-gradient(circle at 25% 30%,rgba(100,55,20,.05) 0 1px,transparent 1.5px) 0 0/14px 17px;
+  mix-blend-mode:multiply;opacity:.45}
+a{color:inherit}
+.shell{width:min(1240px,calc(100% - 34px));margin:auto}
+.topline{height:8px;background:linear-gradient(90deg,#42170f,#9d3527 25%,#d3a34d 50%,#9d3527 75%,#42170f);border-bottom:1px solid #f0d493}
+.nav{position:sticky;top:0;z-index:50;background:#5c1c17f2;color:#f7e5bb;border-bottom:1px solid #d7a951;backdrop-filter:blur(10px)}
+.nav .shell{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:max-content}
+.brand img{width:48px;height:48px;filter:drop-shadow(0 2px 2px #2b110b80)}
+.brand strong{font-size:21px;letter-spacing:.08em}
+.navlinks{display:flex;align-items:center;gap:21px;font-family:"Hind",sans-serif;font-size:15px}
+.navlinks a{text-decoration:none;opacity:.92;position:relative}
+.navlinks a:after{content:"";position:absolute;left:50%;right:50%;bottom:-6px;height:1px;background:#efcc7c;transition:.2s}
+.navlinks a:hover:after{left:0;right:0}
+.lang{border:1px solid #d7a951;border-radius:99px;padding:7px 12px!important}
+.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid #a46e2f}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none}
+.hero:before{inset:0;background:
+  linear-gradient(90deg,rgba(253,242,213,.98) 0 49%,rgba(250,236,201,.86) 63%,rgba(246,226,183,.72)),
+  url("assets/img/home-bharatvarsha-bg.jpg") center/cover}
+.hero:after{width:min(680px,52vw);aspect-ratio:1;right:5%;top:54%;transform:translateY(-50%);background:url("assets/img/bharatvarsha-map.svg") center/contain no-repeat;opacity:.22;filter:sepia(1) saturate(.7) contrast(1.15)}
+.hero-inner{min-height:610px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:48px;padding:75px 0 72px}
+.kicker{font-family:"Noto Serif Devanagari",serif;color:var(--sindoor);font-size:18px;letter-spacing:.08em}
+.hero h1{font-size:clamp(58px,7vw,96px);line-height:.9;margin:10px 0 14px;color:#4b1d15;text-shadow:0 1px 0 #fff7e4}
+.hero h1 span{display:block;font-family:"Noto Serif Devanagari",serif;font-size:.44em;line-height:1.25;color:#7a2a21;margin-top:12px}
+.tagline{font-size:24px;font-style:italic;color:#6e351d;margin:0 0 20px}
+.hero-copy{max-width:630px;font-size:18px;line-height:1.75;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;padding:13px 21px;border:1px solid #7b2a20;font-family:"Hind",sans-serif;font-weight:600;letter-spacing:.03em}
+.btn.primary{color:#fff1cf;background:linear-gradient(#8b2d23,#681d18);box-shadow:inset 0 0 0 2px #d2a04a55,0 8px 20px #5b2d1930}
+.btn.secondary{background:#fff8e5a6;color:#612219;border-color:#b27b33}
+.hero-seal{justify-self:center;align-self:center;width:min(430px,90%);aspect-ratio:1;display:grid;place-items:center;position:relative}
+.hero-seal:before{content:"";position:absolute;inset:2%;border:1px solid #8d5b27;border-radius:50%;box-shadow:0 0 0 8px #f5e4b57a,0 0 0 10px #a9783670}
+.hero-seal:after{content:"✦  ❈  ✦  ❈  ✦  ❈  ✦  ❈";position:absolute;inset:8%;display:grid;place-items:start center;border:1px dashed #9e6a2f;border-radius:50%;color:#8f3a27;letter-spacing:13px;padding-top:18px;font-size:15px}
+.seal-content{text-align:center;position:relative;z-index:2;padding:42px}
+.seal-content .om{font-family:"Noto Serif Devanagari";font-size:72px;color:#82271f;line-height:1}
+.seal-content h2{font-size:38px;margin:8px 0 4px;color:#4b2418}
+.seal-content p{font-family:"Hind";margin:0;color:#75462c}
+.alpana-band{height:48px;position:relative;overflow:hidden;background:#7c281f;border-top:1px solid #cf9d47;border-bottom:1px solid #cf9d47}
+.alpana-band:before{content:"";position:absolute;inset:4px 0;background:
+ radial-gradient(circle at 18px 20px,transparent 0 6px,#e7c778 6.5px 7.5px,transparent 8px),
+ radial-gradient(circle at 54px 20px,transparent 0 3px,#e7c778 3.5px 4.5px,transparent 5px),
+ linear-gradient(45deg,transparent 46%,#e7c778 47% 50%,transparent 51%) 0 0/36px 36px,
+ linear-gradient(-45deg,transparent 46%,#e7c778 47% 50%,transparent 51%) 18px 0/36px 36px;
+ opacity:.8}
+.intro{padding:74px 0 40px;text-align:center}
+.eyebrow{font-family:"Hind";font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:#8b3026}
+.intro h2,.chapters h2,.heritage h2{font-size:clamp(44px,5vw,64px);margin:7px 0 14px;color:#4c2317}
+.intro p{max-width:850px;margin:auto;font-size:18px;line-height:1.8}
+.divider{display:flex;align-items:center;gap:14px;max-width:620px;margin:30px auto;color:#8c3024}
+.divider:before,.divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#9f672d)}
+.divider:after{transform:scaleX(-1)}
+.chapters{padding:28px 0 85px}
+.chapter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;overflow:hidden;min-height:260px;padding:28px 26px 24px;text-decoration:none;background:
+ radial-gradient(circle at 90% 8%,rgba(183,118,43,.15),transparent 8rem),
+ linear-gradient(145deg,#fff7e4d9,#edd6a6db);
+ border:1px solid #a77134;box-shadow:inset 0 0 0 5px #fff8e25c,0 12px 28px #60331616;transition:.25s}
+.card:before{content:"";position:absolute;inset:8px;border:1px solid #be8b4970;pointer-events:none}
+.card:after{content:"❈";position:absolute;right:17px;bottom:9px;font-size:32px;color:#9f5b2f33}
+.card:hover{transform:translateY(-5px);box-shadow:inset 0 0 0 5px #fff8e27a,0 18px 34px #60331629;border-color:#7f3e24}
+.card .num{font-family:"Hind";color:#a13b2b;font-size:12px;letter-spacing:.14em}
+.card .glyph{font-family:"Noto Serif Devanagari";font-size:42px;color:#7d2a21;margin:19px 0 4px}
+.card h3{font-size:31px;line-height:1.05;margin:0 0 8px;color:#492116}
+.card .hi{font-family:"Noto Serif Devanagari";font-size:16px;color:#8a3b2d}
+.card p{font-family:"Hind";font-size:14px;line-height:1.65;color:#5b3d2b;margin:14px 0 17px}
+.card .go{font-family:"Hind";font-size:13px;font-weight:600;color:#7b261e}
+.card.feature{grid-column:span 2;background:
+ radial-gradient(circle at 88% 42%,rgba(153,52,40,.11),transparent 12rem),
+ linear-gradient(135deg,#f8e5b9,#fff5dc)}
+.heritage{padding:68px 0;background:
+ linear-gradient(90deg,#5a1e18f2,#79281ff2),
+ repeating-linear-gradient(45deg,#fff 0 1px,transparent 1px 9px);color:#f3dfb5;border-top:1px solid #d9ad5d;border-bottom:1px solid #d9ad5d}
+.heritage .shell{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.heritage h2{color:#f8e6bd;margin-top:0}
+.heritage p{font-size:17px;line-height:1.75;color:#f1dfbc}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pillar{border:1px solid #d4a75d80;background:#3f140f40;padding:17px 18px}
+.pillar strong{display:block;font-size:19px;color:#ffe9b2;margin-bottom:4px}
+.pillar span{font-family:"Hind";font-size:13px;color:#e4c995}
+.discovery{padding:76px 0}
+.discovery-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.panel{padding:30px;border:1px solid #9d6730;background:#f8e9c8bb;box-shadow:inset 0 0 0 5px #fff7e05c}
+.panel h3{font-size:34px;margin:0 0 8px;color:#502319}
+.panel p{font-family:"Hind";line-height:1.7;margin:0 0 18px;color:#65402b}
+.link-row{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-family:"Hind";font-size:13px;text-decoration:none;border:1px solid #a36d34;padding:8px 11px;background:#fff7e4a8}
+footer{background:#2f160f;color:#d9bf90;border-top:4px solid #8c3024}
+footer .shell{padding:34px 0 38px;display:flex;justify-content:space-between;gap:30px;align-items:flex-end}
+footer strong{color:#f1d8a5;letter-spacing:.08em}
+footer p{margin:6px 0 0;font-family:"Hind";font-size:13px}
+.footlinks{display:flex;gap:16px;flex-wrap:wrap;font-family:"Hind";font-size:13px}
+.footlinks a{text-decoration:none}
+@media(max-width:980px){
+ .navlinks{display:none}.hero-inner{grid-template-columns:1fr;min-height:auto;padding:60px 0}
+ .hero-seal{width:min(380px,82vw)}.hero:after{width:82vw;right:-20%;opacity:.16}
+ .chapter-grid{grid-template-columns:1fr 1fr}.card.feature{grid-column:span 2}
+ .heritage .shell,.discovery-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+ .shell{width:min(100% - 24px,1240px)}.nav .shell{min-height:68px}.brand strong{font-size:17px}.brand img{width:42px;height:42px}
+ .hero h1{font-size:56px}.tagline{font-size:20px}.hero-copy{font-size:16px}.hero-seal{width:92vw}
+ .chapter-grid{grid-template-columns:1fr}.card.feature{grid-column:auto}.card{min-height:230px}
+ .pillars{grid-template-columns:1fr}.actions{flex-direction:column}.btn{justify-content:center}
+ footer .shell{align-items:flex-start;flex-direction:column}
+}
 </style>
 </head>
 <body>
-<main class="homepage" aria-label="Shades of Bharat homepage">
-  <div class="artboard" id="chapters">
-    <img class="hero-art" src="konark-homepage-final.png" alt="Shades of Bharat heritage homepage featuring Bharatvarsha, a carved Konark Chakra, eight cultural chapter plaques and an Indian temple with its dhwaja." width="1536" height="1024" fetchpriority="high">
-    <a class="hotspot brand" href="index.html" aria-label="Shades of Bharat home"><span class="sr-only">Shades of Bharat</span></a>
-    <a class="hotspot nav-home" href="index.html" aria-label="Home"><span class="sr-only">Home</span></a>
-    <a class="hotspot nav-chapters" href="#chapters" aria-label="Chapters"><span class="sr-only">Chapters</span></a>
-    <a class="hotspot nav-timeline" href="timeline.html" aria-label="Timeline"><span class="sr-only">Timeline</span></a>
-    <a class="hotspot nav-gallery" href="gallery.html" aria-label="Gallery"><span class="sr-only">Gallery</span></a>
-    <a class="hotspot nav-resources" href="resources.html" aria-label="Resources"><span class="sr-only">Resources</span></a>
-    <a class="hotspot nav-about" href="about.html" aria-label="About Shades of Bharat"><span class="sr-only">About</span></a>
-    <a class="hotspot nav-contact" href="contact.html" aria-label="Contact"><span class="sr-only">Contact</span></a>
-    <a class="hotspot nav-language" href="languages.html" aria-label="Language selector"><span class="sr-only">Languages</span></a>
-    <a class="hotspot bharatvarsha" href="chapters/bhoomi-bibidhta.html" aria-label="Explore Bharatvarsha"><span class="sr-only">Explore Bharatvarsha</span></a>
-    <a class="hotspot begin" href="chapters/bhoomi-bibidhta.html" aria-label="Begin the journey"><span class="sr-only">Begin the Journey</span></a>
-    <a class="hotspot itihasa" href="chapters/itihasa.html" aria-label="Itihasa — History and Chronicles"><span class="sr-only">Itihasa</span></a>
-    <a class="hotspot utsav" href="chapters/utsav-parva.html" aria-label="Utsav Vaibhavam — Festivals, Fairs and Celebrations"><span class="sr-only">Utsav Vaibhavam</span></a>
-    <a class="hotspot rishi" href="chapters/rishi-parampara.html" aria-label="Rishi Parampara — Sages and Wisdom"><span class="sr-only">Rishi Parampara</span></a>
-    <a class="hotspot tirtha" href="chapters/tirtha-devalaya.html" aria-label="Tirtha Darshan — Sacred Places and Pilgrimage"><span class="sr-only">Tirtha Darshan</span></a>
-    <a class="hotspot gyan" href="chapters/gyan-vigyan.html" aria-label="Gyan-Vigyan — Science, Knowledge and Innovation"><span class="sr-only">Gyan-Vigyan</span></a>
-    <a class="hotspot jeevan" href="chapters/jeevan-shaili.html" aria-label="Bharatiya Jeevan — Life, Traditions and Society"><span class="sr-only">Bharatiya Jeevan</span></a>
-    <a class="hotspot dharma" href="chapters/dharma-shastra.html" aria-label="Dharma and Shastra — Dharma, Values and Scriptures"><span class="sr-only">Dharma and Shastra</span></a>
-    <a class="hotspot kala" href="chapters/kala-nirman.html" aria-label="Kala and Nirman — Art, Architecture and Crafts"><span class="sr-only">Kala and Nirman</span></a>
-    <a class="hotspot temple" href="chapters/tirtha-devalaya.html" aria-label="Explore temples and sacred places"><span class="sr-only">Explore temples and sacred places</span></a>
+<div class="topline"></div>
+<nav class="nav" aria-label="Primary navigation">
+  <div class="shell">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt=""><strong>SHADES OF BHARAT</strong></a>
+    <div class="navlinks">
+      <a href="#chapters">Chapters</a><a href="timeline.html">Timeline</a><a href="gallery.html">Gallery</a>
+      <a href="resources.html">Resources</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a class="lang" href="languages.html">Languages</a>
+    </div>
   </div>
-</main>
+</nav>
+
+<header class="hero">
+  <div class="shell hero-inner">
+    <div>
+      <div class="kicker">भारतस्य अनन्तकथा · A CIVILIZATIONAL JOURNEY</div>
+      <h1>Shades of Bharat<span>भारत के अनंत रंग</span></h1>
+      <p class="tagline">Where Every Thread Tells a Story</p>
+      <p class="hero-copy">Explore Bharat through its sacred landscapes, Itihasa, Rishi traditions, knowledge systems, architecture, arts, festivals and living ways of life — presented with reverence, context and documented sources.</p>
+      <div class="actions">
+        <a class="btn primary" href="#chapters">Explore the Chapters <span>→</span></a>
+        <a class="btn secondary" href="chapters/bhoomi-bibidhta.html">Enter Bharatvarsha</a>
+      </div>
+    </div>
+    <div class="hero-seal" aria-label="Bharatvarsha civilizational geography">
+      <div class="seal-content">
+        <div class="om">ॐ</div>
+        <h2>Bharatvarsha</h2>
+        <p>Bhūmi · Jñāna · Paramparā · Saṃskṛti</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="alpana-band" aria-hidden="true"></div>
+
+<section class="intro">
+  <div class="shell">
+    <div class="eyebrow">A LIVING HERITAGE</div>
+    <h2>One Bharat. Countless Traditions.</h2>
+    <p>Shades of Bharat is designed as an evolving cultural archive: visually rooted in Bharatiya aesthetics, yet built as an editable digital publication. Every chapter can grow independently as new sources, photographs, translations and research are added.</p>
+    <div class="divider"><span>✦ ❈ ✦</span></div>
+  </div>
+</section>
+
+<section class="chapters" id="chapters">
+  <div class="shell">
+    <div class="eyebrow">EXPLORE THE NINE PATHWAYS</div>
+    <h2>Chapters of Bharat</h2>
+    <div class="chapter-grid">
+      <a class="card feature" href="chapters/bhoomi-bibidhta.html">
+        <span class="num">01 · BHŪMI</span><div class="glyph">भूमि</div>
+        <h3>Bharatvarsha</h3><div class="hi">भूगोल · जनपद · विविधता</div>
+        <p>Land, rivers, mountains, regions and the civilizational geography that shaped many Bharatiya traditions.</p><span class="go">BEGIN THE JOURNEY →</span>
+      </a>
+      <a class="card" href="chapters/itihasa.html">
+        <span class="num">02 · ITIHĀSA</span><div class="glyph">इतिहास</div>
+        <h3>Itihasa</h3><div class="hi">इतिहास एवं स्मृति</div>
+        <p>Epics, chronicles, lineages, places and memories through which Bharat narrates its past.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card" href="chapters/rishi-parampara.html">
+        <span class="num">03 · PARAMPARĀ</span><div class="glyph">ऋषि</div>
+        <h3>Rishi Parampara</h3><div class="hi">ऋषि · आचार्य · ज्ञान परम्परा</div>
+        <p>The lives, teachings, schools and intellectual lineages of Rishis, Acharyas and seekers.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card" href="chapters/gyan-vigyan.html">
+        <span class="num">04 · JÑĀNA</span><div class="glyph">ज्ञान</div>
+        <h3>Gyan–Vigyan</h3><div class="hi">ज्ञान · विज्ञान · नवाचार</div>
+        <p>Mathematics, astronomy, medicine, philosophy, language, technology and systems of knowledge.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card" href="chapters/kala-nirman.html">
+        <span class="num">05 · KALĀ</span><div class="glyph">कला</div>
+        <h3>Kala & Nirman</h3><div class="hi">कला · स्थापत्य · शिल्प</div>
+        <p>Temple architecture, sculpture, painting, textiles, crafts and the hands behind the heritage.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card" href="chapters/dharma-shastra.html">
+        <span class="num">06 · DHARMA</span><div class="glyph">धर्म</div>
+        <h3>Dharma & Shastra</h3><div class="hi">दर्शन · शास्त्र · मूल्य</div>
+        <p>Texts, philosophical traditions, ethical ideas and frameworks of Bharatiya thought.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card" href="chapters/jeevan-shaili.html">
+        <span class="num">07 · JĪVAN</span><div class="glyph">जीवन</div>
+        <h3>Bharatiya Jeevan</h3><div class="hi">जीवन शैली · समाज · परम्परा</div>
+        <p>Food, clothing, family traditions, village life, ecology and everyday cultural practices.</p><span class="go">EXPLORE →</span>
+      </a>
+      <a class="card feature" href="chapters/tirtha-devalaya.html">
+        <span class="num">08 · TĪRTHA</span><div class="glyph">तीर्थ</div>
+        <h3>Tirtha Darshan</h3><div class="hi">तीर्थ · देवालय · पवित्र भूगोल</div>
+        <p>Char Dham, temples, sacred rivers, Shakti traditions, pilgrimage routes and the sacred geography of Bharat — documented with textual tradition and historical context.</p><span class="go">ENTER TIRTHA DARSHAN →</span>
+      </a>
+      <a class="card" href="chapters/utsav-parva.html">
+        <span class="num">09 · UTSAV</span><div class="glyph">उत्सव</div>
+        <h3>Utsav Vaibhavam</h3><div class="hi">उत्सव · पर्व · मेला</div>
+        <p>Festivals, fairs, seasonal observances, music, community and celebration across Bharat.</p><span class="go">EXPLORE →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="shell">
+    <div>
+      <div class="eyebrow" style="color:#e9c77f">HOW WE TELL THE STORY</div>
+      <h2>Tradition with Context</h2>
+      <p>Devotional traditions are presented with respect. Scriptural references, Rishi-parampara, inscriptions, architecture, archaeology and later scholarship are identified according to their own evidentiary character rather than blended into a single claim.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><strong>Śruti & Smṛti</strong><span>Veda, Upanishadic, Itihasa and related traditions where applicable.</span></div>
+      <div class="pillar"><strong>Purāṇa & Āgama</strong><span>Textual traditions relevant to temples, tirthas, deities and ritual life.</span></div>
+      <div class="pillar"><strong>Rishi Paramparā</strong><span>Teachings, lineages and living intellectual traditions.</span></div>
+      <div class="pillar"><strong>Documented History</strong><span>Inscriptions, archaeology, architecture and carefully sourced scholarship.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="discovery">
+  <div class="shell discovery-grid">
+    <div class="panel">
+      <div class="eyebrow">FOLLOW THE JOURNEY</div><h3>Sacred Geography & Living Culture</h3>
+      <p>Move between sacred places, festivals, knowledge traditions and the people who keep them alive. The site is designed so every story can expand without rebuilding the page as a single image.</p>
+      <div class="link-row"><a class="chip" href="chapters/tirtha-devalaya.html">Tirtha Darshan</a><a class="chip" href="timeline.html">Timeline</a><a class="chip" href="gallery.html">Gallery</a><a class="chip" href="resources.html">Sources & Resources</a></div>
+    </div>
+    <div class="panel">
+      <div class="eyebrow">THE PROJECT</div><h3>Preserve · Understand · Share</h3>
+      <p>Shades of Bharat brings together heritage storytelling, research, artisanship and visual culture in a form that can continue to grow.</p>
+      <a class="btn secondary" href="about.html">About Shades of Bharat →</a>
+    </div>
+  </div>
+</section>
+
+<div class="alpana-band" aria-hidden="true"></div>
+<footer>
+  <div class="shell">
+    <div><strong>SHADES OF BHARAT</strong><p>Where Every Thread Tells a Story</p></div>
+    <div class="footlinks"><a href="resources.html">Resources</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="languages.html">Languages</a></div>
+  </div>
+</footer>
 </body>
 </html>
