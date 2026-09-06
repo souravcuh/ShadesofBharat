@@ -38,29 +38,17 @@ a{color:inherit}
 .navlinks a:after{content:"";position:absolute;left:50%;right:50%;bottom:-6px;height:1px;background:#efcc7c;transition:.2s}
 .navlinks a:hover:after{left:0;right:0}
 .lang{border:1px solid #d7a951;border-radius:99px;padding:7px 12px!important}
-.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid #a46e2f}
-.hero:before,.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none}
-.hero:before{inset:0;background:
-  linear-gradient(90deg,rgba(253,242,213,.98) 0 49%,rgba(250,236,201,.86) 63%,rgba(246,226,183,.72)),
-  url("assets/img/home-bharatvarsha-bg.jpg") center/cover}
-.hero:after{width:min(680px,52vw);aspect-ratio:1;right:5%;top:54%;transform:translateY(-50%);background:url("assets/img/bharatvarsha-map.svg") center/contain no-repeat;opacity:.22;filter:sepia(1) saturate(.7) contrast(1.15)}
-.hero-inner{min-height:610px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:48px;padding:75px 0 72px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #a46e2f;background:linear-gradient(180deg,#fbefd2 0%,#f4dfb4 100%)}
+.hero-inner{min-height:470px;display:block;padding:78px 0 72px;max-width:900px;margin:auto;text-align:left}
 .kicker{font-family:"Noto Serif Devanagari",serif;color:var(--sindoor);font-size:18px;letter-spacing:.08em}
 .hero h1{font-size:clamp(58px,7vw,96px);line-height:.9;margin:10px 0 14px;color:#4b1d15;text-shadow:0 1px 0 #fff7e4}
 .hero h1 span{display:block;font-family:"Noto Serif Devanagari",serif;font-size:.44em;line-height:1.25;color:#7a2a21;margin-top:12px}
 .tagline{font-size:24px;font-style:italic;color:#6e351d;margin:0 0 20px}
-.hero-copy{max-width:630px;font-size:18px;line-height:1.75;margin:0 0 28px}
+.hero-copy{max-width:760px;font-size:18px;line-height:1.75;margin:0 0 28px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;padding:13px 21px;border:1px solid #7b2a20;font-family:"Hind",sans-serif;font-weight:600;letter-spacing:.03em}
 .btn.primary{color:#fff1cf;background:linear-gradient(#8b2d23,#681d18);box-shadow:inset 0 0 0 2px #d2a04a55,0 8px 20px #5b2d1930}
 .btn.secondary{background:#fff8e5a6;color:#612219;border-color:#b27b33}
-.hero-seal{justify-self:center;align-self:center;width:min(430px,90%);aspect-ratio:1;display:grid;place-items:center;position:relative}
-.hero-seal:before{content:"";position:absolute;inset:2%;border:1px solid #8d5b27;border-radius:50%;box-shadow:0 0 0 8px #f5e4b57a,0 0 0 10px #a9783670}
-.hero-seal:after{content:"✦  ❈  ✦  ❈  ✦  ❈  ✦  ❈";position:absolute;inset:8%;display:grid;place-items:start center;border:1px dashed #9e6a2f;border-radius:50%;color:#8f3a27;letter-spacing:13px;padding-top:18px;font-size:15px}
-.seal-content{text-align:center;position:relative;z-index:2;padding:42px}
-.seal-content .om{font-family:"Noto Serif Devanagari";font-size:72px;color:#82271f;line-height:1}
-.seal-content h2{font-size:38px;margin:8px 0 4px;color:#4b2418}
-.seal-content p{font-family:"Hind";margin:0;color:#75462c}
 .alpana-band{height:48px;position:relative;overflow:hidden;background:#7c281f;border-top:1px solid #cf9d47;border-bottom:1px solid #cf9d47}
 .alpana-band:before{content:"";position:absolute;inset:4px 0;background:
  radial-gradient(circle at 18px 20px,transparent 0 6px,#e7c778 6.5px 7.5px,transparent 8px),
@@ -117,14 +105,13 @@ footer p{margin:6px 0 0;font-family:"Hind";font-size:13px}
 .footlinks{display:flex;gap:16px;flex-wrap:wrap;font-family:"Hind";font-size:13px}
 .footlinks a{text-decoration:none}
 @media(max-width:980px){
- .navlinks{display:none}.hero-inner{grid-template-columns:1fr;min-height:auto;padding:60px 0}
- .hero-seal{width:min(380px,82vw)}.hero:after{width:82vw;right:-20%;opacity:.16}
+ .navlinks{display:none}.hero-inner{min-height:auto;padding:60px 0}
  .chapter-grid{grid-template-columns:1fr 1fr}.card.feature{grid-column:span 2}
  .heritage .shell,.discovery-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
  .shell{width:min(100% - 24px,1240px)}.nav .shell{min-height:68px}.brand strong{font-size:17px}.brand img{width:42px;height:42px}
- .hero h1{font-size:56px}.tagline{font-size:20px}.hero-copy{font-size:16px}.hero-seal{width:92vw}
+ .hero h1{font-size:56px}.tagline{font-size:20px}.hero-copy{font-size:16px}
  .chapter-grid{grid-template-columns:1fr}.card.feature{grid-column:auto}.card{min-height:230px}
  .pillars{grid-template-columns:1fr}.actions{flex-direction:column}.btn{justify-content:center}
  footer .shell{align-items:flex-start;flex-direction:column}
@@ -154,13 +141,6 @@ footer p{margin:6px 0 0;font-family:"Hind";font-size:13px}
       <div class="actions">
         <a class="btn primary" href="#chapters">Explore the Chapters <span>→</span></a>
         <a class="btn secondary" href="chapters/bhoomi-bibidhta.html">Enter Bharatvarsha</a>
-      </div>
-    </div>
-    <div class="hero-seal" aria-label="Bharatvarsha civilizational geography">
-      <div class="seal-content">
-        <div class="om">ॐ</div>
-        <h2>Bharatvarsha</h2>
-        <p>Bhūmi · Jñāna · Paramparā · Saṃskṛti</p>
       </div>
     </div>
   </div>
