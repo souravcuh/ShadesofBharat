@@ -116,148 +116,180 @@ footer p{margin:6px 0 0;font-family:"Hind";font-size:13px}
  .pillars{grid-template-columns:1fr}.actions{flex-direction:column}.btn{justify-content:center}
  footer .shell{align-items:flex-start;flex-direction:column}
 }
-  /* ========= Chapter border variants ========= */
+  /* ========= Strong, visible Bharatiya chapter frames ========= */
 .card{
-  --motif:#9a5b2e;
-  --motif-soft:rgba(154,91,46,.18);
+  --motif:#8d3d28;
+  --motif2:#c38b3b;
+  --framepaper:#f8e8c5;
+  border:6px solid transparent;
+  isolation:isolate;
 }
-
-.card::before,
-.card::after{
+.card > *{position:relative;z-index:2}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  z-index:1;
   pointer-events:none;
+  border:1px solid rgba(103,49,28,.42);
+}
+.card::after{
+  position:absolute;
+  z-index:1;
+  pointer-events:none;
+  color:#7e2c21;
 }
 
-/* Bengal Alpana */
+/* 01 · Saura-inspired tribal geometry */
+.card.saura-tribal{
+  background:
+    linear-gradient(145deg,#fff7e4,#edd6a6) padding-box,
+    repeating-linear-gradient(45deg,#6f211b 0 8px,#d3a34d 8px 12px,#f0d79e 12px 16px,#7b2d20 16px 24px) border-box;
+}
+.card.saura-tribal::before{
+  border:2px solid #7a2a20;
+  box-shadow:inset 0 0 0 4px rgba(211,163,77,.22);
+}
+.card.saura-tribal::after{
+  content:"△ ● △  △ ● △";
+  left:20px;right:20px;bottom:10px;
+  text-align:center;
+  font-size:12px;
+  letter-spacing:7px;
+}
+
+/* 02 / 06 · Palm-leaf manuscript */
+.card.manuscript{
+  background:
+    linear-gradient(145deg,#fff5dc,#ead19e) padding-box,
+    repeating-linear-gradient(90deg,#6d251c 0 2px,#d8ae61 2px 5px,#8e5b28 5px 7px,#f4dfb4 7px 12px) border-box;
+}
+.card.manuscript::before{
+  inset:8px;
+  border:1px solid #815028;
+  box-shadow:
+    inset 0 0 0 3px rgba(173,119,45,.18),
+    inset 0 0 0 5px rgba(111,32,27,.10);
+}
+.card.manuscript::after{
+  content:"॥  ❦  ॥";
+  right:17px;top:12px;
+  font-family:"Noto Serif Devanagari",serif;
+  font-size:16px;
+  letter-spacing:3px;
+}
+
+/* 03 · Odisha Jhoti / Chita inspired */
+.card.jhoti-odisha{
+  background:
+    linear-gradient(145deg,#fff7e3,#edd4a2) padding-box,
+    repeating-linear-gradient(135deg,#8e2e23 0 5px,#f4dfaf 5px 10px,#b57731 10px 15px,#f4dfaf 15px 20px) border-box;
+}
+.card.jhoti-odisha::before{
+  inset:8px;
+  border:2px solid #8c3025;
+  background:
+    radial-gradient(circle at 11px 11px,transparent 0 4px,#9a3b2b 4.5px 5.5px,transparent 6px) 0 0/28px 28px,
+    radial-gradient(circle at calc(100% - 11px) calc(100% - 11px),transparent 0 4px,#b17b37 4.5px 5.5px,transparent 6px) 0 0/28px 28px;
+  opacity:.48;
+}
+.card.jhoti-odisha::after{
+  content:"❈  ◇  ❈";
+  left:18px;bottom:10px;
+  font-size:14px;
+  letter-spacing:5px;
+}
+
+/* 04 · Yantra / knowledge geometry */
+.card.yantra{
+  background:
+    linear-gradient(145deg,#fff6df,#edd4a4) padding-box,
+    repeating-conic-gradient(from 45deg,#7b2c22 0 12.5%,#d4a04a 0 25%,#f4dfb4 0 37.5%,#9b5e2d 0 50%) border-box;
+}
+.card.yantra::before{
+  inset:9px;
+  border:1px solid #7c3b27;
+  background:
+    linear-gradient(45deg,transparent 48%,rgba(124,59,39,.12) 49% 51%,transparent 52%),
+    linear-gradient(-45deg,transparent 48%,rgba(124,59,39,.12) 49% 51%,transparent 52%);
+  background-size:34px 34px;
+}
+.card.yantra::after{
+  content:"◇";
+  right:16px;bottom:10px;
+  font-size:22px;
+}
+
+/* 05 · Kalamkari floral vine */
+.card.kalamkari{
+  background:
+    linear-gradient(145deg,#fff4d8,#ebd09a) padding-box,
+    repeating-radial-gradient(ellipse at center,#7d2b21 0 4px,#cf9b47 5px 8px,#f3dfb1 9px 13px,#6f211b 14px 17px) border-box;
+}
+.card.kalamkari::before{
+  inset:8px;
+  border:2px solid #8d3a25;
+  box-shadow:inset 0 0 0 3px rgba(204,151,65,.18);
+}
+.card.kalamkari::after{
+  content:"❁  ❦  ❁  ❦  ❁";
+  left:20px;right:20px;bottom:9px;
+  text-align:center;
+  font-size:14px;
+  letter-spacing:7px;
+  color:#8a3a25;
+}
+
+/* 07 / 09 · Bengali Alpana inspired */
 .card.alpana-bengal{
   background:
-    radial-gradient(circle at 12% 14%, rgba(159,53,40,.08), transparent 6rem),
-    linear-gradient(145deg,#fff7e4d9,#edd6a6db);
+    linear-gradient(145deg,#fff7e4,#edd7aa) padding-box,
+    repeating-radial-gradient(circle at center,#8b2f24 0 3px,#f4dfb4 4px 8px,#bc8138 9px 11px,#f4dfb4 12px 15px) border-box;
 }
 .card.alpana-bengal::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
+  inset:8px;
+  border:2px solid #9a392a;
   background:
-    radial-gradient(circle at 18px 18px, transparent 0 8px, var(--motif) 8.5px 9.5px, transparent 10px),
-    radial-gradient(circle at calc(100% - 18px) 18px, transparent 0 8px, var(--motif) 8.5px 9.5px, transparent 10px),
-    radial-gradient(circle at 18px calc(100% - 18px), transparent 0 8px, var(--motif) 8.5px 9.5px, transparent 10px),
-    radial-gradient(circle at calc(100% - 18px) calc(100% - 18px), transparent 0 8px, var(--motif) 8.5px 9.5px, transparent 10px);
+    radial-gradient(circle at 18px 18px,transparent 0 7px,#8d3025 7.5px 8.5px,transparent 9px),
+    radial-gradient(circle at calc(100% - 18px) 18px,transparent 0 7px,#8d3025 7.5px 8.5px,transparent 9px),
+    radial-gradient(circle at 18px calc(100% - 18px),transparent 0 7px,#8d3025 7.5px 8.5px,transparent 9px),
+    radial-gradient(circle at calc(100% - 18px) calc(100% - 18px),transparent 0 7px,#8d3025 7.5px 8.5px,transparent 9px);
 }
 .card.alpana-bengal::after{
   content:"❈";
-  position:absolute; right:17px; bottom:9px;
-  font-size:30px; color:#9f5b2f55;
+  right:15px;bottom:7px;
+  font-size:29px;
 }
 
-/* Odisha Jhoti / Chita */
-.card.jhoti-odisha{
-  background:
-    linear-gradient(145deg,#fff7e4d9,#edd6a6db);
-}
-.card.jhoti-odisha::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
-  background:
-    linear-gradient(90deg, transparent 0 14px, var(--motif-soft) 14px 16px, transparent 16px calc(100% - 16px), var(--motif-soft) calc(100% - 16px) calc(100% - 14px), transparent calc(100% - 14px)),
-    linear-gradient(transparent 0 14px, var(--motif-soft) 14px 16px, transparent 16px calc(100% - 16px), var(--motif-soft) calc(100% - 16px) calc(100% - 14px), transparent calc(100% - 14px));
-}
-.card.jhoti-odisha .glyph{ text-shadow:0 0 0 transparent; }
-.card.jhoti-odisha .num::after{
-  content:"  •  ଶ୍ରୀ";
-  color:#8f3023;
-}
-
-/* Kalamkari vine */
-.card.kalamkari{
-  background:
-    radial-gradient(circle at 86% 14%, rgba(159,53,40,.07), transparent 7rem),
-    linear-gradient(145deg,#fff7e4d9,#edd6a6db);
-}
-.card.kalamkari::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
-}
-.card.kalamkari::after{
-  content:"❁ ❁ ❁";
-  position:absolute; left:18px; right:18px; bottom:10px;
-  text-align:center; font-size:15px; color:#8c4d28aa; letter-spacing:8px;
-}
-
-/* Tamil Kolam */
+/* 08 · Tamil Kolam inspired */
 .card.kolam-tamil{
-  background:linear-gradient(145deg,#fff7e4d9,#edd6a6db);
+  background:
+    linear-gradient(145deg,#fff6df,#efd8a6) padding-box,
+    repeating-linear-gradient(45deg,#74261d 0 4px,#f2ddb0 4px 8px,#b57732 8px 12px,#f2ddb0 12px 16px) border-box;
 }
 .card.kolam-tamil::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
+  inset:8px;
+  border:2px solid #7c2a21;
   background:
-    linear-gradient(45deg, transparent 47%, var(--motif-soft) 48% 52%, transparent 53%) 0 0/28px 28px,
-    linear-gradient(-45deg, transparent 47%, var(--motif-soft) 48% 52%, transparent 53%) 14px 0/28px 28px;
-  opacity:.7;
+    linear-gradient(45deg,transparent 45%,rgba(122,42,33,.18) 46% 49%,transparent 50%),
+    linear-gradient(-45deg,transparent 45%,rgba(122,42,33,.18) 46% 49%,transparent 50%);
+  background-size:30px 30px;
+  opacity:.62;
 }
 .card.kolam-tamil::after{
-  content:"◈";
-  position:absolute; right:16px; top:14px;
-  font-size:18px; color:#93422b88;
+  content:"◇  ·  ◇  ·  ◇";
+  right:15px;top:11px;
+  font-size:13px;
+  letter-spacing:4px;
 }
 
-/* Saura / tribal Odisha */
-.card.saura-tribal{
-  background:linear-gradient(145deg,#fff7e4d9,#edd6a6db);
+.card:hover{
+  transform:translateY(-5px);
+  filter:saturate(1.05);
 }
-.card.saura-tribal::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
-  background:
-    repeating-linear-gradient(90deg, transparent 0 16px, rgba(154,91,46,.12) 16px 18px),
-    repeating-linear-gradient(0deg, transparent 0 16px, rgba(154,91,46,.08) 16px 18px);
-}
-.card.saura-tribal::after{
-  content:"▲ ● ▲";
-  position:absolute; left:18px; bottom:10px;
-  font-size:13px; letter-spacing:6px; color:#8b4c29;
-}
-
-/* Manuscript / palm-leaf */
-.card.manuscript{
-  background:
-    linear-gradient(145deg,#fff7e4d9,#edd6a6db);
-}
-.card.manuscript::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
-  box-shadow: inset 0 0 0 1px rgba(135,93,46,.18);
-}
-.card.manuscript::after{
-  content:"॥";
-  position:absolute; right:16px; top:14px;
-  font-family:"Noto Serif Devanagari",serif;
-  font-size:20px; color:#8f3a27aa;
-}
-
-/* Yantra / geometric */
-.card.yantra{
-  background:
-    linear-gradient(145deg,#fff7e4d9,#edd6a6db);
-}
-.card.yantra::before{
-  content:"";
-  position:absolute; inset:8px;
-  border:1px solid #be8b4970;
-  background:
-    radial-gradient(circle at center, transparent 0 28px, rgba(154,91,46,.08) 28px 29px, transparent 30px),
-    linear-gradient(90deg, transparent calc(50% - .5px), rgba(154,91,46,.14) calc(50% - .5px) calc(50% + .5px), transparent calc(50% + .5px)),
-    linear-gradient(transparent calc(50% - .5px), rgba(154,91,46,.14) calc(50% - .5px) calc(50% + .5px), transparent calc(50% + .5px));
-}
-.card.yantra::after{
-  content:"✦";
-  position:absolute; right:16px; bottom:10px;
-  font-size:20px; color:#8f3a27aa;
+@media(max-width:640px){
+  .card{border-width:5px}
+  .card::after{opacity:.72}
 }
 </style>
 </head>
