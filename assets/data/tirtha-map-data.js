@@ -6,7 +6,8 @@ window.TIRTHA_MAP_DATA = [
     "cats": [
       "Major",
       "Char Dham",
-      "Temple"
+      "Temple",
+      "Panch Badri"
     ],
     "x": 610,
     "y": 195,
@@ -20,7 +21,8 @@ window.TIRTHA_MAP_DATA = [
     "cats": [
       "Major",
       "Temple",
-      "Jyotirlinga"
+      "Jyotirlinga",
+      "Panch Kedar"
     ],
     "x": 580,
     "y": 205,
@@ -46,7 +48,8 @@ window.TIRTHA_MAP_DATA = [
     "region": "Uttarakhand",
     "cats": [
       "Major",
-      "River & Sangam"
+      "River & Sangam",
+      "Panch Prayag"
     ],
     "x": 605,
     "y": 245,
@@ -60,7 +63,8 @@ window.TIRTHA_MAP_DATA = [
     "cats": [
       "Major",
       "Sapta Puri",
-      "River & Sangam"
+      "River & Sangam",
+      "Kumbha"
     ],
     "x": 590,
     "y": 265,
@@ -141,7 +145,8 @@ window.TIRTHA_MAP_DATA = [
     "region": "Uttar Pradesh",
     "cats": [
       "Major",
-      "River & Sangam"
+      "River & Sangam",
+      "Kumbha"
     ],
     "x": 690,
     "y": 390,
@@ -197,7 +202,8 @@ window.TIRTHA_MAP_DATA = [
       "Major",
       "Sapta Puri",
       "Temple",
-      "Jyotirlinga"
+      "Jyotirlinga",
+      "Kumbha"
     ],
     "x": 555,
     "y": 455,
@@ -268,7 +274,8 @@ window.TIRTHA_MAP_DATA = [
       "Major",
       "River & Sangam",
       "Temple",
-      "Jyotirlinga"
+      "Jyotirlinga",
+      "Kumbha"
     ],
     "x": 500,
     "y": 520,
@@ -1243,5 +1250,265 @@ window.TIRTHA_MAP_DATA = [
     "y": 340,
     "desc": "Regional/manuscript identification has variants. Shown as a map locator for the 51-Pitha register; see the dedicated page for Devi, Bhairava, anga and source notes.",
     "link": "shakti-peetha.html"
+  },
+  {
+    "id": "tungnath",
+    "name": "Tungnath",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Kedar",
+      "Temple"
+    ],
+    "x": 588,
+    "y": 220,
+    "desc": "One of the Panch Kedar, in the Garhwal Himalayan Shiva pilgrimage tradition.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "rudranath",
+    "name": "Rudranath",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Kedar",
+      "Temple"
+    ],
+    "x": 600,
+    "y": 216,
+    "desc": "One of the Panch Kedar, revered in the Garhwal Himalayan Shiva pilgrimage tradition.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "madhyamaheshwar",
+    "name": "Madhyamaheshwar",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Kedar",
+      "Temple"
+    ],
+    "x": 577,
+    "y": 218,
+    "desc": "One of the Panch Kedar, part of the Garhwal Himalayan Shiva pilgrimage network.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "kalpeshwar",
+    "name": "Kalpeshwar",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Kedar",
+      "Temple"
+    ],
+    "x": 604,
+    "y": 228,
+    "desc": "One of the Panch Kedar, traditionally visited in the Garhwal Himalayan Shiva circuit.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "yogadhyan-badri",
+    "name": "Yogadhyan Badri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Badri",
+      "Temple"
+    ],
+    "x": 607,
+    "y": 210,
+    "desc": "One of the Panch Badri shrines of the Garhwal Vaishnava pilgrimage tradition.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "vriddha-badri",
+    "name": "Vriddha Badri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Badri",
+      "Temple"
+    ],
+    "x": 600,
+    "y": 233,
+    "desc": "One of the Panch Badri shrines associated with the Badrinath sacred region.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "bhavishya-badri",
+    "name": "Bhavishya Badri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Badri",
+      "Temple"
+    ],
+    "x": 615,
+    "y": 220,
+    "desc": "One of the Panch Badri shrines in the Garhwal sacred landscape.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "adi-badri",
+    "name": "Adi Badri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Badri",
+      "Temple"
+    ],
+    "x": 610,
+    "y": 248,
+    "desc": "One of the Panch Badri, a temple group in the Garhwal region.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "vishnuprayag",
+    "name": "Vishnuprayag",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Prayag",
+      "River & Sangam"
+    ],
+    "x": 612,
+    "y": 225,
+    "desc": "Panch Prayag confluence of the Alaknanda and Dhauliganga.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "nandaprayag",
+    "name": "Nandaprayag",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Prayag",
+      "River & Sangam"
+    ],
+    "x": 605,
+    "y": 242,
+    "desc": "Panch Prayag confluence of the Alaknanda and Nandakini.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "karnaprayag",
+    "name": "Karnaprayag",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Prayag",
+      "River & Sangam"
+    ],
+    "x": 598,
+    "y": 250,
+    "desc": "Panch Prayag confluence of the Alaknanda and Pindar.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "rudraprayag",
+    "name": "Rudraprayag",
+    "region": "Uttarakhand",
+    "cats": [
+      "Panch Prayag",
+      "River & Sangam"
+    ],
+    "x": 600,
+    "y": 258,
+    "desc": "Panch Prayag confluence of the Alaknanda and Mandakini.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "mayureshwar-morgaon",
+    "name": "Mayureshwar · Morgaon",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 523,
+    "y": 566,
+    "desc": "Morgaon Mayureshwar, traditionally the starting and concluding shrine of the Ashtavinayak pilgrimage.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "siddhivinayak-siddhatek",
+    "name": "Siddhivinayak · Siddhatek",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 545,
+    "y": 565,
+    "desc": "Siddhatek Siddhivinayak, one of Maharashtra's eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "ballaleshwar-pali",
+    "name": "Ballaleshwar · Pali",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 500,
+    "y": 555,
+    "desc": "Pali Ballaleshwar, one of the eight Ashtavinayak shrines of Maharashtra.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "varadvinayak-mahad",
+    "name": "Varadvinayak · Mahad",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 505,
+    "y": 548,
+    "desc": "Mahad Varadvinayak, one of the eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "chintamani-theur",
+    "name": "Chintamani · Theur",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 532,
+    "y": 558,
+    "desc": "Theur Chintamani, one of Maharashtra's eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "girijatmaj-lenyadri",
+    "name": "Girijatmaj · Lenyadri",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 522,
+    "y": 535,
+    "desc": "Lenyadri Girijatmaj, the rock-cut hill shrine in the Ashtavinayak network.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "vighneshwar-ozar",
+    "name": "Vighneshwar · Ozar",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 526,
+    "y": 538,
+    "desc": "Ozar Vighneshwar, one of the eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "mahaganapati-ranjangaon",
+    "name": "Mahaganapati · Ranjangaon",
+    "region": "Maharashtra",
+    "cats": [
+      "Ashtavinayak",
+      "Temple"
+    ],
+    "x": 540,
+    "y": 548,
+    "desc": "Ranjangaon Mahaganapati, one of Maharashtra's eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html"
   }
 ];
