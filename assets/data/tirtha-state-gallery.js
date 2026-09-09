@@ -11,9 +11,9 @@ window.TIRTHA_STATE_GALLERIES = {
       "page": "https://commons.wikimedia.org/wiki/File:Badrinath_Temple.jpg"
     },
     {
-      "title": "Gangotri",
-      "file": "Gangotri temple.jpg",
-      "page": "https://commons.wikimedia.org/wiki/File:Gangotri_temple.jpg"
+      "title": "Har Ki Pauri · Haridwar",
+      "file": "Har ki Pauri Haridwar.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Har_ki_Pauri_Haridwar.jpg"
     }
   ],
   "Uttar Pradesh": [
@@ -36,8 +36,8 @@ window.TIRTHA_STATE_GALLERIES = {
   "Odisha": [
     {
       "title": "Jagannath · Puri",
-      "file": "Jagannath Temple in Puri district.jpg",
-      "page": "https://commons.wikimedia.org/wiki/File:Jagannath_Temple_in_Puri_district.jpg"
+      "file": "Jagannath Temple Puri.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Jagannath_Temple_Puri.jpg"
     },
     {
       "title": "Lingaraj · Bhubaneswar",
@@ -143,8 +143,8 @@ window.TIRTHA_STATE_GALLERIES = {
     },
     {
       "title": "Omkareshwar",
-      "file": "Omkareshwar Temple.png",
-      "page": "https://commons.wikimedia.org/wiki/File:Omkareshwar_Temple.png"
+      "file": "Omkareshwar Temple.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Omkareshwar_Temple.jpg"
     }
   ],
   "West Bengal": [
@@ -173,9 +173,14 @@ window.TIRTHA_STATE_GALLERIES = {
   ],
   "Karnataka": [
     {
-      "title": "Sringeri Sharada",
-      "file": "Sringeri Sharadha temple.jpg",
-      "page": "https://commons.wikimedia.org/wiki/File:Sringeri_Sharadha_temple.jpg"
+      "title": "Sringeri Sharada Peetham",
+      "file": "Sringeri Sharada Peetham.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Sringeri_Sharada_Peetham.jpg"
+    },
+    {
+      "title": "Udupi Sri Krishna Matha",
+      "file": "Udipi sri krishna temple.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Udipi_sri_krishna_temple.jpg"
     },
     {
       "title": "Murudeshwar",
