@@ -43,8 +43,8 @@ a{color:inherit}
 .search{flex:1;min-width:250px;padding:11px 13px;border:1px solid #986331;background:#fff9e8;font-family:"Hind";font-size:14px;color:#3c2518}
 .filter{border:1px solid #9c6a37;background:#faedce;padding:9px 11px;font-family:"Hind";font-size:12px;cursor:pointer;transition:.15s}
 .filter:hover,.filter.active{background:#77261f;color:#f6dfad;border-color:#77261f}
-.map-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.75fr);gap:18px;padding:22px 0 65px;align-items:start}
-.map-card,.info-card{background:#f8e9c9c7;border:1px solid #9c6834;box-shadow:inset 0 0 0 5px #fff8e35c,0 16px 36px rgba(66,35,17,.12)}
+.map-layout{display:grid;grid-template-columns:minmax(220px,.56fr) minmax(0,1.7fr) minmax(300px,.72fr);gap:16px;padding:22px 0 65px;align-items:start}
+.map-card,.info-card,.gallery-card{background:#f8e9c9c7;border:1px solid #9c6834;box-shadow:inset 0 0 0 5px #fff8e35c,0 16px 36px rgba(66,35,17,.12)}
 .map-card{padding:12px;position:relative}
 .map-toolbar{display:flex;gap:7px;position:absolute;right:22px;top:22px;z-index:8}
 .map-btn{width:36px;height:36px;border:1px solid #7e4a28;background:#fff4d8;color:#5c281b;font-size:19px;cursor:pointer;box-shadow:0 4px 10px #4e2d1a24}
@@ -67,7 +67,11 @@ a{color:inherit}
 .marker.shakti .core{fill:#8a2858}
 .marker.selected .halo{stroke:#efc365;stroke-width:4;filter:drop-shadow(0 0 4px #7c2a21)}
 .map-note{font-family:"Hind";font-size:11.5px;line-height:1.55;color:#6c4933;padding:10px 4px 0}
-.info-card{position:sticky;top:150px;padding:26px 25px}
+.gallery-card,.info-card{position:sticky;top:150px;padding:21px 18px}
+.gallery-head{margin-bottom:12px}.gallery-head .small{font-family:"Hind";font-size:10px;letter-spacing:.12em;color:#963326;text-transform:uppercase}.gallery-head h2{font-size:27px;line-height:1.05;margin:5px 0 4px;color:#4b2116}.gallery-head p{font-family:"Hind";font-size:11.5px;line-height:1.45;margin:0;color:#76503a}
+.photo-stack{display:grid;gap:10px}.temple-photo{position:relative;display:block;height:138px;overflow:hidden;border:1px solid #9c6834;background:#ead8ad;text-decoration:none}.temple-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}.temple-photo:hover img{transform:scale(1.045)}.temple-photo span{position:absolute;left:0;right:0;bottom:0;padding:24px 9px 7px;background:linear-gradient(transparent,rgba(42,19,11,.88));color:#fff0c8;font-family:"Hind";font-size:11px}.photo-credit{position:absolute!important;right:6px!important;left:auto!important;top:6px!important;bottom:auto!important;padding:3px 5px!important;background:#3a1c14b8!important;font-size:8.5px!important;color:#f7dfaa!important}
+.nearby-list{display:grid;gap:7px;margin-top:10px}.nearby-item{font-family:"Hind";font-size:11px;line-height:1.35;padding:8px 9px;border:1px solid #b58a56;background:#fff4dc}.gallery-foot{font-family:"Hind";font-size:9.5px;line-height:1.45;color:#7c533b;margin-top:10px}
+.info-card{padding:26px 25px}
 .info-eyebrow{font-family:"Hind";font-size:10px;letter-spacing:.12em;color:#963326;text-transform:uppercase}
 .info-card h2{font-size:36px;line-height:1.02;margin:6px 0 4px;color:#4b2116}
 .info-region{font-family:"Hind";font-size:13px;color:#85533a;margin-bottom:13px}
@@ -81,12 +85,15 @@ a{color:inherit}
 .count{font-family:"Hind";font-size:12px;color:#72472f;margin-left:auto}
 .empty{font-family:"Hind";font-size:13px;color:#7b4b31;margin-top:12px;display:none}
 .layer-note{margin-top:20px;padding:12px 13px;background:#fff7e3c2;border-left:4px solid #963326;font-family:"Hind";font-size:12px;line-height:1.55}
-@media(max-width:1000px){
- .map-layout{grid-template-columns:1fr}.info-card{position:relative;top:auto}.navlinks{display:none}.controls{top:70px}
+@media(max-width:1120px){
+ .map-layout{grid-template-columns:minmax(0,1fr) 330px}.gallery-card{grid-column:1 / -1;position:relative;top:auto}.photo-stack{grid-template-columns:repeat(3,1fr)}.temple-photo{height:150px}.info-card{position:sticky;top:150px}.navlinks{display:none}.controls{top:70px}
+}
+@media(max-width:850px){
+ .map-layout{grid-template-columns:1fr}.gallery-card,.info-card{position:relative;top:auto}.gallery-card{grid-column:auto}.photo-stack{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:620px){
  .shell{width:min(100% - 18px,1380px)}.control-row{gap:6px}.filter{padding:8px 9px}.map-card{padding:7px}.map-toolbar{right:15px;top:15px}
- .map-stage{aspect-ratio:1/1}.hero{padding-top:42px}.info-card{padding:22px 20px}.legend{grid-template-columns:1fr}
+ .map-stage{aspect-ratio:1/1}.hero{padding-top:42px}.info-card{padding:22px 20px}.legend{grid-template-columns:1fr}.photo-stack{grid-template-columns:1fr}.temple-photo{height:180px}
 }
 </style>
 </head>
@@ -100,7 +107,7 @@ a{color:inherit}
 <header class="hero">
   <div class="dev">॥ भारतस्य पवित्र भूगोलः ॥</div>
   <h1>Interactive Bharat Tirtha Map<span>भारत तीर्थ मानचित्र</span></h1>
-  <p>Explore sacred cities, Char Dham, Mathas, Sangams, temple kshetras, Jyotirlingas and the 51-Pīṭha layer through one interactive SVG atlas. Click any marker to open its description and related editable register.</p>
+  <p>Explore sacred cities, Char Dham, Mathas, Sangams, temple kshetras, Jyotirlingas and the 51-Pīṭha layer through one interactive SVG atlas. <strong>Point to a marker</strong> to reveal its description and a changing gallery of sacred places from the same state; click to lock the place and zoom.</p>
 </header>
 <div class="alpana" aria-hidden="true"></div>
 
@@ -111,12 +118,28 @@ a{color:inherit}
   <button class="filter" data-layer="Matha">Mathas</button>
   <button class="filter" data-layer="Sapta Puri">Sapta Puri</button>
   <button class="filter" data-layer="River & Sangam">River / Sangam</button>
+  <button class="filter" data-layer="Panch Kedar">Panch Kedar</button>
+  <button class="filter" data-layer="Panch Badri">Panch Badri</button>
+  <button class="filter" data-layer="Panch Prayag">Panch Prayag</button>
+  <button class="filter" data-layer="Kumbha">Kumbha</button>
+  <button class="filter" data-layer="Ashtavinayak">Ashtavinayak</button>
   <button class="filter" data-layer="Jyotirlinga">12 Jyotirlingas</button>
   <button class="filter" data-layer="Shakti Peetha">51 Shakti Peethas</button>
   <span id="count" class="count"></span>
 </div></section>
 
 <main class="shell map-layout">
+  <aside class="gallery-card" id="gallery">
+    <div class="gallery-head">
+      <div class="small">HOVER A TIRTHA</div>
+      <h2>Nearby Sacred Places</h2>
+      <p>Move the cursor over a marker. Verified photographs from the same state will appear here.</p>
+    </div>
+    <div class="nearby-list">
+      <div class="nearby-item">The gallery uses real photographs with a link back to the Wikimedia Commons file page for source and licence information.</div>
+    </div>
+  </aside>
+
   <section class="map-card" aria-label="Interactive sacred geography map">
     <div class="map-toolbar">
       <button class="map-btn" id="zoomIn" aria-label="Zoom in">+</button>
@@ -138,7 +161,7 @@ a{color:inherit}
     <div class="info-eyebrow">SELECT A MARKER</div>
     <h2>Sacred Geography</h2>
     <div class="info-region">Interactive exploration</div>
-    <p>Choose a filter and click any marker. The description appears here without baking factual text into an image, so each place can be corrected or expanded independently.</p>
+    <p>Choose a filter and point to any marker. Its description and same-state temple gallery update immediately. Click a marker to lock the selection and zoom.</p>
     <div class="legend">
       <span><i class="dot" style="background:#b3422f"></i> Char Dham</span>
       <span><i class="dot" style="background:#9a6a21"></i> Matha</span>
@@ -153,9 +176,11 @@ a{color:inherit}
 </main>
 
 <script src="../assets/data/tirtha-map-data.js"></script>
+<script src="../assets/data/tirtha-state-gallery.js"></script>
 <script>
 const DATA=window.TIRTHA_MAP_DATA||[];
-const svg=document.getElementById('map'), markerLayer=document.getElementById('markers'), info=document.getElementById('info');
+const GALLERIES=window.TIRTHA_STATE_GALLERIES||{};
+const svg=document.getElementById('map'), markerLayer=document.getElementById('markers'), info=document.getElementById('info'), gallery=document.getElementById('gallery');
 const search=document.getElementById('search'), count=document.getElementById('count'), empty=document.getElementById('empty');
 let layer='Major', selectedId=null;
 let vb={x:0,y:0,w:1200,h:900};
@@ -165,6 +190,7 @@ function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;',
 function markerClass(p){
   if(layer==='Shakti Peetha') return 'shakti';
   if(layer==='Jyotirlinga') return 'jyotirlinga';
+  if(layer==='Panch Kedar'||layer==='Panch Badri'||layer==='Panch Prayag'||layer==='Kumbha'||layer==='Ashtavinayak') return 'major';
   if(p.cats.includes('Char Dham')) return 'char';
   if(p.cats.includes('Matha')) return 'matha';
   if(p.cats.includes('River & Sangam')) return 'river';
@@ -175,6 +201,11 @@ function markerClass(p){
 function markerLetter(p){
   if(layer==='Shakti Peetha') return 'Ś';
   if(layer==='Jyotirlinga') return 'J';
+  if(layer==='Panch Kedar') return 'K';
+  if(layer==='Panch Badri') return 'B';
+  if(layer==='Panch Prayag') return 'P';
+  if(layer==='Kumbha') return 'K';
+  if(layer==='Ashtavinayak') return 'G';
   if(p.cats.includes('Char Dham')) return 'D';
   if(p.cats.includes('Matha')) return 'M';
   if(p.cats.includes('River & Sangam')) return 'S';
@@ -206,20 +237,56 @@ function render(){
     const halo=document.createElementNS(NS,'circle'); halo.setAttribute('class','halo'); halo.setAttribute('r','10'); g.appendChild(halo);
     const core=document.createElementNS(NS,'circle'); core.setAttribute('class','core'); core.setAttribute('r','7'); g.appendChild(core);
     const tx=document.createElementNS(NS,'text'); tx.setAttribute('y','.5'); tx.textContent=markerLetter(p); g.appendChild(tx);
+    g.addEventListener('mouseenter',()=>previewPlace(p));
+    g.addEventListener('focus',()=>previewPlace(p));
     g.addEventListener('click',()=>selectPlace(p,true));
     g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectPlace(p,true)}});
     markerLayer.appendChild(g);
   });
 }
-function selectPlace(p,focus){
-  selectedId=p.id;
-  info.innerHTML='<div class="info-eyebrow">SACRED PLACE</div>'+
+function stateKey(region){
+  return Object.keys(GALLERIES).find(k=>String(region).includes(k))||null;
+}
+function commonsImg(file){
+  return 'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(file)+'?width=720';
+}
+function sameRegionPlaces(p){
+  const key=stateKey(p.region);
+  if(!key) return [];
+  return DATA.filter(x=>x.id!==p.id && String(x.region).includes(key) && x.cats.includes('Major')).slice(0,5);
+}
+function updateGallery(p){
+  const key=stateKey(p.region), photos=key?(GALLERIES[key]||[]):[];
+  let html='<div class="gallery-head"><div class="small">NEAR '+esc(p.name)+'</div><h2>'+esc(key||p.region)+'</h2><p>Nearby sacred places and temple traditions from the same state or region.</p></div>';
+  if(photos.length){
+    html+='<div class="photo-stack">'+photos.slice(0,3).map(ph=>
+      '<a class="temple-photo" href="'+esc(ph.page)+'" target="_blank" rel="noopener" title="Open photo source and licence">'+
+      '<img loading="lazy" src="'+commonsImg(ph.file)+'" alt="'+esc(ph.title)+'">'+
+      '<span>'+esc(ph.title)+'</span><span class="photo-credit">source ↗</span></a>'
+    ).join('')+'</div><div class="gallery-foot">Photographs link to their Wikimedia Commons file pages for author and licence details.</div>';
+  }else{
+    const nearby=sameRegionPlaces(p);
+    html+='<div class="nearby-list">'+(nearby.length?nearby.map(x=>'<div class="nearby-item">'+esc(x.name)+'</div>').join(''):'<div class="nearby-item">A verified photo gallery for this region is being curated. The map information remains fully editable.</div>')+'</div>';
+  }
+  gallery.innerHTML=html;
+}
+function showInfo(p,locked){
+  info.innerHTML='<div class="info-eyebrow">'+(locked?'SELECTED TIRTHA':'HOVER PREVIEW')+'</div>'+
     '<h2>'+esc(p.name)+'</h2>'+
     '<div class="info-region">'+esc(p.region)+'</div>'+
     '<div class="chips">'+p.cats.map(c=>'<span class="chip">'+esc(c)+'</span>').join('')+'</div>'+
     '<p>'+esc(p.desc)+'</p>'+
     '<a class="info-link" href="'+esc(p.link)+'">Open related register →</a>'+
-    '<div class="layer-note">This marker is an orientation aid on a schematic map. Detailed textual, regional and variant notes belong in the linked editable page.</div>';
+    '<div class="layer-note">Map markers are orientation aids. Scriptural, regional and disputed-identification details remain in the linked editable research pages.</div>';
+}
+function previewPlace(p){
+  showInfo(p,false);
+  updateGallery(p);
+}
+function selectPlace(p,focus){
+  selectedId=p.id;
+  showInfo(p,true);
+  updateGallery(p);
   render();
   if(focus) focusOn(p.x,p.y);
 }
