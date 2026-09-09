@@ -7,12 +7,15 @@ window.TIRTHA_MAP_DATA = [
       "Major",
       "Char Dham",
       "Temple",
-      "Panch Badri"
+      "Panch Badri",
+      "Uttarakhand Char Dham"
     ],
     "x": 610,
     "y": 195,
     "desc": "Himalayan shrine of Badrinarayana and one of the established pan-Indian Char Dham.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.7433,
+    "lon": 79.4938
   },
   {
     "id": "kedarnath",
@@ -22,12 +25,15 @@ window.TIRTHA_MAP_DATA = [
       "Major",
       "Temple",
       "Jyotirlinga",
-      "Panch Kedar"
+      "Panch Kedar",
+      "Uttarakhand Char Dham"
     ],
     "x": 580,
     "y": 205,
     "desc": "High Himalayan Shiva kshetra, revered among the twelve Jyotirlingas.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.7352,
+    "lon": 79.0669
   },
   {
     "id": "jyotirmath",
@@ -40,7 +46,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 595,
     "y": 225,
     "desc": "Northern monastic centre associated in the Shankara tradition with the Himalayan sacred region.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.5565,
+    "lon": 79.5659
   },
   {
     "id": "devprayag",
@@ -54,7 +62,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 605,
     "y": 245,
     "desc": "Revered confluence where the Bhagirathi and Alaknanda meet and the river is thereafter called Ganga.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.146,
+    "lon": 78.598
   },
   {
     "id": "haridwar",
@@ -69,7 +79,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 590,
     "y": 265,
     "desc": "A major Ganga tirtha, one of the four Kumbha centres, and associated with the traditional Mayapuri of the Sapta Puri list.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 29.9457,
+    "lon": 78.1642
   },
   {
     "id": "kurukshetra",
@@ -82,7 +94,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 545,
     "y": 280,
     "desc": "Mahabharata and Bhagavad Gita sacred landscape with an extensive tirtha network.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 29.9695,
+    "lon": 76.8783
   },
   {
     "id": "mathura",
@@ -96,7 +110,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 610,
     "y": 320,
     "desc": "Krishna Janmabhumi and the wider Braj landscape of Krishna-bhakti.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 27.4924,
+    "lon": 77.6737
   },
   {
     "id": "naimisha",
@@ -109,7 +125,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 670,
     "y": 315,
     "desc": "Forest-tirtha associated with Rishis and Purana recitation traditions.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 27.35,
+    "lon": 80.49
   },
   {
     "id": "ayodhya",
@@ -123,7 +141,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 720,
     "y": 320,
     "desc": "Revered in the Ramayana tradition as the city of Sri Rama on the Sarayu.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 26.7922,
+    "lon": 82.1998
   },
   {
     "id": "pushkar",
@@ -137,7 +157,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 455,
     "y": 380,
     "desc": "Sacred lake and Brahma tirtha, especially prominent in Kartika observances.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 26.4897,
+    "lon": 74.5511
   },
   {
     "id": "prayag",
@@ -151,7 +173,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 690,
     "y": 390,
     "desc": "Confluence of Ganga and Yamuna, with Sarasvati revered in tradition; a major Kumbha tirtha.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 25.4358,
+    "lon": 81.8463
   },
   {
     "id": "kashi",
@@ -166,7 +190,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 745,
     "y": 400,
     "desc": "Foremost sacred city of Vishvanatha and the Ganga, with traditions of moksha, learning and pilgrimage.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 25.3109,
+    "lon": 83.0107
   },
   {
     "id": "chitrakoot",
@@ -179,7 +205,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 645,
     "y": 430,
     "desc": "Ramayana landscape around Kamadgiri, Mandakini and the Atri–Anasuya ashrama tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 25.168,
+    "lon": 80.867
   },
   {
     "id": "gaya",
@@ -192,7 +220,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 790,
     "y": 430,
     "desc": "Major pitri-tirtha of shraddha and pindadana traditions on the Falgu.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 24.796,
+    "lon": 85.0039
   },
   {
     "id": "ujjain",
@@ -208,7 +238,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 555,
     "y": 455,
     "desc": "Ancient Avantika, home of Mahakaleshwar and one of the four Kumbha centres.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 23.1828,
+    "lon": 75.768
   },
   {
     "id": "amarkantak",
@@ -222,7 +254,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 650,
     "y": 500,
     "desc": "Sacred highland associated with the source of the Narmada and a network of temples and ashramas.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 22.679,
+    "lon": 81.7596
   },
   {
     "id": "dwarka",
@@ -237,7 +271,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 330,
     "y": 420,
     "desc": "Western sacred city of Krishna and one of the pan-Indian Char Dham.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 22.2394,
+    "lon": 68.9678
   },
   {
     "id": "dwaraka-matha",
@@ -250,7 +286,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 350,
     "y": 440,
     "desc": "Western cardinal Matha of the Shankara tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 22.2394,
+    "lon": 68.9678
   },
   {
     "id": "somnath",
@@ -264,7 +302,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 340,
     "y": 485,
     "desc": "Jyotirlinga kshetra at Prabhas Patan on the Saurashtra coast.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 20.888,
+    "lon": 70.4012
   },
   {
     "id": "nashik",
@@ -280,7 +320,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 500,
     "y": 520,
     "desc": "Godavari source-region, Jyotirlinga kshetra and Kumbha centre.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 19.932,
+    "lon": 73.53
   },
   {
     "id": "pandharpur",
@@ -293,7 +335,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 545,
     "y": 585,
     "desc": "Heart of the Vitthal–Rukmini and Varkari pilgrimage tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 17.677,
+    "lon": 75.327
   },
   {
     "id": "kamakhya",
@@ -307,7 +351,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 885,
     "y": 350,
     "desc": "A major living Shakta-Tantric centre on Nilachala Hill in Guwahati.",
-    "link": "shakti-peetha.html"
+    "link": "shakti-peetha.html",
+    "lat": 26.1664,
+    "lon": 91.7055
   },
   {
     "id": "gangasagar",
@@ -320,7 +366,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 860,
     "y": 485,
     "desc": "Major pilgrimage landscape at the Ganga delta, associated with Kapila Muni tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 21.65,
+    "lon": 88.08
   },
   {
     "id": "lingaraj",
@@ -333,7 +381,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 745,
     "y": 515,
     "desc": "Bhubaneswar's major Kalinga temple and a central shrine of Ekamra Kshetra.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 20.238,
+    "lon": 85.833
   },
   {
     "id": "govardhan-matha",
@@ -346,7 +396,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 778,
     "y": 520,
     "desc": "Eastern cardinal Matha in the Shankara tradition, within Purushottama Kshetra.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 19.8047,
+    "lon": 85.8179
   },
   {
     "id": "puri",
@@ -360,7 +412,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 765,
     "y": 545,
     "desc": "Eastern Char Dham and one of Bharat's great living ritual centres.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 19.8047,
+    "lon": 85.8179
   },
   {
     "id": "udupi",
@@ -373,7 +427,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 510,
     "y": 630,
     "desc": "Major centre of the Madhva tradition and Krishna worship.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 13.3405,
+    "lon": 74.7536
   },
   {
     "id": "sringeri",
@@ -386,7 +442,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 540,
     "y": 650,
     "desc": "Southern cardinal Matha and enduring centre of Advaita and Sharada worship.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 13.4165,
+    "lon": 75.2521
   },
   {
     "id": "tirumala",
@@ -399,7 +457,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 620,
     "y": 655,
     "desc": "Sacred Seshachalam hill of Venkateswara and one of Bharat's most important living Vaishnava centres.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 13.6833,
+    "lon": 79.347
   },
   {
     "id": "guruvayur",
@@ -412,7 +472,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 510,
     "y": 690,
     "desc": "Major Kerala Vaishnava centre dedicated to Guruvayurappan.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 10.594,
+    "lon": 76.042
   },
   {
     "id": "kanchi",
@@ -426,7 +488,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 625,
     "y": 690,
     "desc": "Ancient temple-city with major Shaiva, Vaishnava and Shakta traditions.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 12.8342,
+    "lon": 79.7036
   },
   {
     "id": "palani",
@@ -439,7 +503,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 565,
     "y": 705,
     "desc": "Dhandayuthapani kshetra, one of the Six Abodes of Murugan.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 10.45,
+    "lon": 77.52
   },
   {
     "id": "srirangam",
@@ -452,7 +518,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 595,
     "y": 720,
     "desc": "Ranganathaswamy temple-city and a foremost Sri Vaishnava sacred centre.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 10.8621,
+    "lon": 78.6901
   },
   {
     "id": "chidambaram",
@@ -465,7 +533,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 630,
     "y": 725,
     "desc": "Great Shaiva centre of Nataraja, associated with the Akasha element.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 11.3982,
+    "lon": 79.6954
   },
   {
     "id": "sabarimala",
@@ -478,7 +548,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 525,
     "y": 735,
     "desc": "Hill pilgrimage to Sree Dharma Sastha / Ayyappa, marked by vrata and seasonal pilgrimage discipline.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 9.434,
+    "lon": 77.081
   },
   {
     "id": "rameswaram",
@@ -493,7 +565,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 570,
     "y": 765,
     "desc": "Ramanathaswamy joins the Char Dham and Jyotirlinga networks and is closely associated with Ramayana tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 9.2881,
+    "lon": 79.3129
   },
   {
     "id": "somnath-j",
@@ -505,7 +579,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 340,
     "y": 485,
     "desc": "Somnath at Prabhas Patan.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 20.888,
+    "lon": 70.4012
   },
   {
     "id": "mallikarjuna-j",
@@ -517,7 +593,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 605,
     "y": 610,
     "desc": "Mallikarjuna at Srisailam.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 16.073,
+    "lon": 78.868
   },
   {
     "id": "mahakala-j",
@@ -529,7 +607,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 555,
     "y": 455,
     "desc": "Mahakaleshwar at Ujjain.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 23.1828,
+    "lon": 75.768
   },
   {
     "id": "omkareshwar-j",
@@ -541,7 +621,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 575,
     "y": 470,
     "desc": "Omkareshwar in the Narmada landscape.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 22.245,
+    "lon": 76.151
   },
   {
     "id": "kedarnath-j",
@@ -553,7 +635,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 580,
     "y": 205,
     "desc": "Himalayan Kedarnath.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 30.7352,
+    "lon": 79.0669
   },
   {
     "id": "bhimashankar-j",
@@ -565,7 +649,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 510,
     "y": 535,
     "desc": "Bhimashankar in the Sahyadri region.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 19.072,
+    "lon": 73.535
   },
   {
     "id": "kashi-j",
@@ -577,7 +663,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 745,
     "y": 400,
     "desc": "Vishwanath at Kashi.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 25.3109,
+    "lon": 83.0107
   },
   {
     "id": "trimbak-j",
@@ -589,7 +677,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 500,
     "y": 520,
     "desc": "Trimbakeshwar near Nashik.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 19.932,
+    "lon": 73.53
   },
   {
     "id": "vaidyanath-j",
@@ -601,7 +691,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 790,
     "y": 455,
     "desc": "A major living identification is Deoghar; competing regional traditions are documented separately.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 24.492,
+    "lon": 86.7
   },
   {
     "id": "nageshwar-j",
@@ -613,7 +705,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 350,
     "y": 420,
     "desc": "A common identification is near Dwarka; other regional identifications also exist.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 22.335,
+    "lon": 69.087
   },
   {
     "id": "rameswaram-j",
@@ -625,7 +719,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 570,
     "y": 765,
     "desc": "Jyotirlinga at Rameswaram.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 9.2881,
+    "lon": 79.3129
   },
   {
     "id": "grishneshwar-j",
@@ -637,7 +733,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 525,
     "y": 525,
     "desc": "Grishneshwar near Ellora.",
-    "link": "tirtha-devalaya.html#jyotirlinga"
+    "link": "tirtha-devalaya.html#jyotirlinga",
+    "lat": 20.024,
+    "lon": 75.17
   },
   {
     "id": "sp-1",
@@ -1262,7 +1360,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 588,
     "y": 220,
     "desc": "One of the Panch Kedar, in the Garhwal Himalayan Shiva pilgrimage tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.4894,
+    "lon": 79.2166
   },
   {
     "id": "rudranath",
@@ -1275,7 +1375,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 600,
     "y": 216,
     "desc": "One of the Panch Kedar, revered in the Garhwal Himalayan Shiva pilgrimage tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.5483,
+    "lon": 79.3186
   },
   {
     "id": "madhyamaheshwar",
@@ -1288,7 +1390,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 577,
     "y": 218,
     "desc": "One of the Panch Kedar, part of the Garhwal Himalayan Shiva pilgrimage network.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.647,
+    "lon": 79.222
   },
   {
     "id": "kalpeshwar",
@@ -1301,7 +1405,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 604,
     "y": 228,
     "desc": "One of the Panch Kedar, traditionally visited in the Garhwal Himalayan Shiva circuit.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.514,
+    "lon": 79.449
   },
   {
     "id": "yogadhyan-badri",
@@ -1314,7 +1420,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 607,
     "y": 210,
     "desc": "One of the Panch Badri shrines of the Garhwal Vaishnava pilgrimage tradition.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.638,
+    "lon": 79.558
   },
   {
     "id": "vriddha-badri",
@@ -1327,7 +1435,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 600,
     "y": 233,
     "desc": "One of the Panch Badri shrines associated with the Badrinath sacred region.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.557,
+    "lon": 79.496
   },
   {
     "id": "bhavishya-badri",
@@ -1340,7 +1450,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 615,
     "y": 220,
     "desc": "One of the Panch Badri shrines in the Garhwal sacred landscape.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.626,
+    "lon": 79.736
   },
   {
     "id": "adi-badri",
@@ -1353,7 +1465,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 610,
     "y": 248,
     "desc": "One of the Panch Badri, a temple group in the Garhwal region.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 29.989,
+    "lon": 79.318
   },
   {
     "id": "vishnuprayag",
@@ -1366,7 +1480,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 612,
     "y": 225,
     "desc": "Panch Prayag confluence of the Alaknanda and Dhauliganga.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.561,
+    "lon": 79.578
   },
   {
     "id": "nandaprayag",
@@ -1379,7 +1495,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 605,
     "y": 242,
     "desc": "Panch Prayag confluence of the Alaknanda and Nandakini.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.333,
+    "lon": 79.327
   },
   {
     "id": "karnaprayag",
@@ -1392,7 +1510,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 598,
     "y": 250,
     "desc": "Panch Prayag confluence of the Alaknanda and Pindar.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.258,
+    "lon": 79.219
   },
   {
     "id": "rudraprayag",
@@ -1405,7 +1525,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 600,
     "y": 258,
     "desc": "Panch Prayag confluence of the Alaknanda and Mandakini.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 30.284,
+    "lon": 78.981
   },
   {
     "id": "mayureshwar-morgaon",
@@ -1418,7 +1540,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 523,
     "y": 566,
     "desc": "Morgaon Mayureshwar, traditionally the starting and concluding shrine of the Ashtavinayak pilgrimage.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.277,
+    "lon": 74.321
   },
   {
     "id": "siddhivinayak-siddhatek",
@@ -1431,7 +1555,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 545,
     "y": 565,
     "desc": "Siddhatek Siddhivinayak, one of Maharashtra's eight Ashtavinayak shrines.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.267,
+    "lon": 74.748
   },
   {
     "id": "ballaleshwar-pali",
@@ -1444,7 +1570,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 500,
     "y": 555,
     "desc": "Pali Ballaleshwar, one of the eight Ashtavinayak shrines of Maharashtra.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.541,
+    "lon": 73.214
   },
   {
     "id": "varadvinayak-mahad",
@@ -1457,7 +1585,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 505,
     "y": 548,
     "desc": "Mahad Varadvinayak, one of the eight Ashtavinayak shrines.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.592,
+    "lon": 73.414
   },
   {
     "id": "chintamani-theur",
@@ -1470,7 +1600,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 532,
     "y": 558,
     "desc": "Theur Chintamani, one of Maharashtra's eight Ashtavinayak shrines.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.525,
+    "lon": 74.055
   },
   {
     "id": "girijatmaj-lenyadri",
@@ -1483,7 +1615,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 522,
     "y": 535,
     "desc": "Lenyadri Girijatmaj, the rock-cut hill shrine in the Ashtavinayak network.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 19.244,
+    "lon": 73.88
   },
   {
     "id": "vighneshwar-ozar",
@@ -1496,7 +1630,9 @@ window.TIRTHA_MAP_DATA = [
     "x": 526,
     "y": 538,
     "desc": "Ozar Vighneshwar, one of the eight Ashtavinayak shrines.",
-    "link": "maha-tirtha-kendra.html"
+    "link": "maha-tirtha-kendra.html",
+    "lat": 19.203,
+    "lon": 73.875
   },
   {
     "id": "mahaganapati-ranjangaon",
@@ -1509,6 +1645,115 @@ window.TIRTHA_MAP_DATA = [
     "x": 540,
     "y": 548,
     "desc": "Ranjangaon Mahaganapati, one of Maharashtra's eight Ashtavinayak shrines.",
+    "link": "maha-tirtha-kendra.html",
+    "lat": 18.753,
+    "lon": 74.244
+  },
+  {
+    "id": "gangotri",
+    "name": "Gangotri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Major",
+      "Temple",
+      "Uttarakhand Char Dham"
+    ],
+    "lat": 30.9947,
+    "lon": 78.9398,
+    "x": 590,
+    "y": 195,
+    "desc": "Gangotri is the Uttarakhand Char Dham shrine associated with the sacred source-tradition of the Ganga; Gaumukh lies farther upstream in the Gangotri glacier region.",
     "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "yamunotri",
+    "name": "Yamunotri",
+    "region": "Uttarakhand",
+    "cats": [
+      "Major",
+      "Temple",
+      "Uttarakhand Char Dham"
+    ],
+    "lat": 31.014,
+    "lon": 78.46,
+    "x": 575,
+    "y": 195,
+    "desc": "Yamunotri is the Uttarakhand Char Dham shrine associated with the source-region and worship of the Yamuna.",
+    "link": "maha-tirtha-kendra.html"
+  },
+  {
+    "id": "sarovar-manasarovar",
+    "name": "Manasarovar",
+    "region": "Kailasa–Manasarovara region · Tibet/China",
+    "lat": 30.65,
+    "lon": 81.47,
+    "desc": "Lake Manasarovar is revered in Hindu, Buddhist, Jain and Bon traditions; here it is shown as an extended sacred-geography marker outside modern India.",
+    "cats": [
+      "Panch Sarovar",
+      "Sacred Lake"
+    ],
+    "x": 600,
+    "y": 600,
+    "link": "tirtha-devalaya.html"
+  },
+  {
+    "id": "sarovar-bindu",
+    "name": "Bindu Sarovar · Siddhpur",
+    "region": "Gujarat",
+    "lat": 23.918,
+    "lon": 72.372,
+    "desc": "Bindu Sarovar at Siddhpur is one of the traditional Panch Sarovar and a major sacred lake of Gujarat.",
+    "cats": [
+      "Panch Sarovar",
+      "Sacred Lake"
+    ],
+    "x": 600,
+    "y": 600,
+    "link": "tirtha-devalaya.html"
+  },
+  {
+    "id": "sarovar-pushkar",
+    "name": "Pushkar Sarovar",
+    "region": "Rajasthan",
+    "lat": 26.4897,
+    "lon": 74.5511,
+    "desc": "Pushkar Lake is one of the traditional Panch Sarovar and the centre of the Pushkar tirtha landscape.",
+    "cats": [
+      "Panch Sarovar",
+      "Sacred Lake"
+    ],
+    "x": 600,
+    "y": 600,
+    "link": "tirtha-devalaya.html"
+  },
+  {
+    "id": "sarovar-narayan",
+    "name": "Narayan Sarovar",
+    "region": "Gujarat",
+    "lat": 23.675,
+    "lon": 68.535,
+    "desc": "Narayan Sarovar in Kutch is one of the traditional Panch Sarovar.",
+    "cats": [
+      "Panch Sarovar",
+      "Sacred Lake"
+    ],
+    "x": 600,
+    "y": 600,
+    "link": "tirtha-devalaya.html"
+  },
+  {
+    "id": "sarovar-pampa",
+    "name": "Pampa Sarovar",
+    "region": "Karnataka",
+    "lat": 15.35,
+    "lon": 76.48,
+    "desc": "Pampa Sarovar near the Hampi–Anegundi landscape is one of the traditional Panch Sarovar and is associated with Ramayana tradition.",
+    "cats": [
+      "Panch Sarovar",
+      "Sacred Lake"
+    ],
+    "x": 600,
+    "y": 600,
+    "link": "tirtha-devalaya.html"
   }
 ];
