@@ -107,7 +107,8 @@ a{color:inherit}
 <header class="hero">
   <div class="dev">॥ भारतस्य पवित्र भूगोलः ॥</div>
   <h1>Interactive Bharat Tirtha Map<span>भारत तीर्थ मानचित्र</span></h1>
-  <p>Explore sacred cities, Char Dham, Mathas, Sangams, temple kshetras, Jyotirlingas and the 51-Pīṭha layer through one interactive SVG atlas. <strong>Point to a marker</strong> to reveal its description and a changing gallery of sacred places from the same state; click to lock the place and zoom.</p>
+  <p>Explore sacred cities, the pan-Indian Char Dham, Uttarakhand Char Dham, Mathas, Sangams, Panch Kedar, Panch Badri, Panch Prayag, Panch Sarovar, Jyotirlingas and the 51-Pīṭha layer through one interactive SVG atlas. <strong>Point to a marker</strong> to reveal its description and a changing gallery of sacred places from the same state; click to lock the place and zoom.</p>
+  <p style="margin-top:10px;color:#7a3a26;font-family:'Noto Serif Devanagari',serif">चरैवेति चरैवेति · ऐतरेय ब्राह्मण ७.१५</p>
 </header>
 <div class="alpana" aria-hidden="true"></div>
 
@@ -118,9 +119,11 @@ a{color:inherit}
   <button class="filter" data-layer="Matha">Mathas</button>
   <button class="filter" data-layer="Sapta Puri">Sapta Puri</button>
   <button class="filter" data-layer="River & Sangam">River / Sangam</button>
+  <button class="filter" data-layer="Uttarakhand Char Dham">Uttarakhand Char Dham</button>
   <button class="filter" data-layer="Panch Kedar">Panch Kedar</button>
   <button class="filter" data-layer="Panch Badri">Panch Badri</button>
   <button class="filter" data-layer="Panch Prayag">Panch Prayag</button>
+  <button class="filter" data-layer="Panch Sarovar">Panch Sarovar</button>
   <button class="filter" data-layer="Kumbha">Kumbha</button>
   <button class="filter" data-layer="Ashtavinayak">Ashtavinayak</button>
   <button class="filter" data-layer="Jyotirlinga">12 Jyotirlingas</button>
@@ -154,7 +157,7 @@ a{color:inherit}
         </g>
       </svg>
     </div>
-    <div class="map-note"><strong>Map note:</strong> this version now uses a recognizable generalized outline of Bharat as the geographic base. It is a locator map, not an official political boundary map. Marker positions are approximate orientation aids; disputed or variant sacred identifications are documented in the linked research pages.</div>
+    <div class="map-note"><strong>Map note:</strong> the visual composition is inspired by the Tirtha Darshan poster, but factual labels are not taken from the poster image. Clear-location markers are now placed from latitude/longitude on the generalized Bharat base; disputed or variant sacred identifications remain explicitly documented in the linked research pages.</div>
   </section>
 
   <aside class="info-card" id="info">
@@ -190,7 +193,7 @@ function esc(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;',
 function markerClass(p){
   if(layer==='Shakti Peetha') return 'shakti';
   if(layer==='Jyotirlinga') return 'jyotirlinga';
-  if(layer==='Panch Kedar'||layer==='Panch Badri'||layer==='Panch Prayag'||layer==='Kumbha'||layer==='Ashtavinayak') return 'major';
+  if(layer==='Panch Kedar'||layer==='Panch Badri'||layer==='Panch Prayag'||layer==='Panch Sarovar'||layer==='Uttarakhand Char Dham'||layer==='Kumbha'||layer==='Ashtavinayak') return 'major';
   if(p.cats.includes('Char Dham')) return 'char';
   if(p.cats.includes('Matha')) return 'matha';
   if(p.cats.includes('River & Sangam')) return 'river';
@@ -204,6 +207,8 @@ function markerLetter(p){
   if(layer==='Panch Kedar') return 'K';
   if(layer==='Panch Badri') return 'B';
   if(layer==='Panch Prayag') return 'P';
+  if(layer==='Panch Sarovar') return 'S';
+  if(layer==='Uttarakhand Char Dham') return 'D';
   if(layer==='Kumbha') return 'K';
   if(layer==='Ashtavinayak') return 'G';
   if(p.cats.includes('Char Dham')) return 'D';
@@ -213,6 +218,16 @@ function markerLetter(p){
   if(p.cats.includes('Itihasa & Rishi')) return 'R';
   return 'T';
 }
+
+function mapPoint(p){
+  if(Number.isFinite(p.lat)&&Number.isFinite(p.lon)){
+    const x=330.9+(p.lon-68.176645)*25.453436600584208;
+    const y=136.1+(35.494010-p.lat)*23.74632085504191;
+    return {x,y};
+  }
+  return {x:p.x,y:p.y};
+}
+
 function visibleRows(){
   const q=search.value.trim().toLowerCase();
   if(q){
@@ -229,7 +244,8 @@ function render(){
     const g=document.createElementNS(NS,'g');
     g.setAttribute('class','marker '+markerClass(p)+(p.id===selectedId?' selected':''));
     g.setAttribute('data-id',p.id);
-    g.setAttribute('transform','translate('+p.x+' '+p.y+')');
+    const pt=mapPoint(p);
+    g.setAttribute('transform','translate('+pt.x+' '+pt.y+')');
     g.setAttribute('tabindex','0');
     g.setAttribute('role','button');
     g.setAttribute('aria-label',p.name+', '+p.region);
@@ -288,7 +304,7 @@ function selectPlace(p,focus){
   showInfo(p,true);
   updateGallery(p);
   render();
-  if(focus) focusOn(p.x,p.y);
+  if(focus){const pt=mapPoint(p);focusOn(pt.x,pt.y);}
 }
 function setView(){svg.setAttribute('viewBox',[vb.x,vb.y,vb.w,vb.h].join(' '))}
 function clamp(){
